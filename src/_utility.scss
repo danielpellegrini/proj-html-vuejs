@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// font size
+.font-s {
+  font-size: .5em;
+}
+.font-sm {
+  font-size: .7em;
+}
+.font-m {
+  font-size: 1.1em;
+}
+.font-ml {
+  font-size: 1.5em;
+}
+.font-l {
+  font-size: 2em;
+}
+// end font size
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+// FLEXBOX
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// end FLEXBOX
+
+.active {
+  background-color: #fe6601;
+  color: white;
+
+  img {
+    filter: brightness(9);
+  }
+}

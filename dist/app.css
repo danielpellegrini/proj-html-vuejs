@@ -1,1 +1,107 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+.font-s {
+  font-size: 0.5em;
+}
+
+.font-sm {
+  font-size: 0.7em;
+}
+
+.font-m {
+  font-size: 1.1em;
+}
+
+.font-ml {
+  font-size: 1.5em;
+}
+
+.font-l {
+  font-size: 2em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active {
+  background-color: #fe6601;
+  color: white;
+}
+.active img {
+  filter: brightness(9);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+#app .navbar-top {
+  margin: 0 auto;
+  width: 1200px;
+  height: 150px;
+}
+#app .navbar-top .logo img {
+  height: 150px;
+}
+#app .navbar-top .icons-container {
+  padding: 15px;
+}
+#app .navbar-top .icons-container div {
+  height: 150px;
+  align-items: center;
+  padding: 0 30px;
+}
+#app .navbar-top .icons-container div:hover {
+  background-color: #fe6601;
+}
+#app .background-section1-container {
+  background-image: url("../img/section1/slider_slide2_background.png");
+  background-size: contain;
+  width: 100%;
+  height: 650px;
+}
+#app .background-section1-container .welcome {
+  color: #554e9e;
+}
+#app .background-section1-container .welcome h3 {
+  color: #fe6601;
+}
+#app .background-section1-container .welcome button {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
