@@ -52,19 +52,42 @@
       <!-- end navbar top -->
 
       <!-- section 1 -->
-      <section class="background-section1-container">
+      <section class="background-section1-container flex-center">
         <div class="background-section1 flex-start">
 
-          <div class="welcome font-l">
-            <h3>Friendly Atmosphere</h3>
+          <div class="welcome font-xl">
+            <h4>Friendly Atmosphere</h4>
             <h1>Welcoming Place</h1>
-            <h2>For Every Child</h2>
-
+            <h3>For Every Child</h3>
             <button class="uppercase active" type="button">buy this theme now</button>
           </div>
 
-        </div>
+          <div class="slider-container">
+
+              <div class="prev flex-center"
+                   @click="previous">
+                <i class="fas fa-angle-left"></i>
+              </div>
+              <div class="images">
+                <img :src="sliderSection1[0]">
+              </div>
+              <div class="images">
+                <img :src="sliderSection1[1]">
+              </div>
+              <div class="next flex-center"
+                   @click="next">
+                <i class="fas fa-angle-right"></i>
+              </div>
+
+
+          </div>
+
       </section>
+      <div class="slider-nav flex-center">
+        <i v-for="(item, index) in sliderSection1"
+        :class="activeDot(index)"
+        @click="clickedDot(index)"></i>
+      </div>
       <!-- end section 1 -->
 
       <!-- navbar bottom -->

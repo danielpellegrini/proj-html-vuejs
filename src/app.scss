@@ -1,13 +1,18 @@
 @import "utility";
 @import "var";
 
+
+@mixin container1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
 @mixin background-img {
   background-size: contain;
   width: 100%;
   height: 650px;
 }
 @mixin button {
-  padding: 15px;
+  padding: 20px;
   border: none;
   cursor: pointer;
 }
@@ -17,8 +22,7 @@
   height: 100vh;
 
   .navbar-top {
-    margin: 0 auto;
-    width: 1200px;
+    @include container1200;
     height: 150px;
     // background-color: #d7ac95;
 
@@ -46,18 +50,47 @@
   .background-section1-container {
     background-image: url($bg-section1);
     @include background-img;
+    position: relative;
 
-    .welcome {
-      color: $text-purple;
+    .background-section1 {
+      @include container1200;
 
-      h3 {
-        color: $text-orange;
+
+      .welcome {
+        color: $text-purple;
+        line-height: 2em;
+
+        h4 {
+          color: $text-orange;
+        }
+
+        button {
+          @include button;
+        }
+      } //welcome
+
+      .slider-container {
+        position: absolute;
+        right: 0;;
+        top: 50%;
+        transform: translate(-30%, -50%);
+        display: flex;
+
+        & div:nth-child(3) {
+          position: relative;
+          right: 120px;
+          top: 20px;
+          z-index: -1;
+        }
+
       }
 
-      button {
-        @include button;
-      }
-    }
+    } //background-section1
+
+
+  } //background-section1-container
+
+  .slider-nav {
+    @include container1200;
   }
-
 } //end app

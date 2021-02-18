@@ -24,6 +24,10 @@
   font-size: 2em;
 }
 
+.font-xl {
+  font-size: 2.5em;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -70,8 +74,8 @@
   height: 100vh;
 }
 #app .navbar-top {
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
   height: 150px;
 }
 #app .navbar-top .logo img {
@@ -93,15 +97,38 @@
   background-size: contain;
   width: 100%;
   height: 650px;
+  position: relative;
 }
-#app .background-section1-container .welcome {
+#app .background-section1-container .background-section1 {
+  width: 1200px;
+  margin: 0 auto;
+}
+#app .background-section1-container .background-section1 .welcome {
   color: #554e9e;
+  line-height: 2em;
 }
-#app .background-section1-container .welcome h3 {
+#app .background-section1-container .background-section1 .welcome h4 {
   color: #fe6601;
 }
-#app .background-section1-container .welcome button {
-  padding: 15px;
+#app .background-section1-container .background-section1 .welcome button {
+  padding: 20px;
   border: none;
   cursor: pointer;
+}
+#app .background-section1-container .background-section1 .slider-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-30%, -50%);
+  display: flex;
+}
+#app .background-section1-container .background-section1 .slider-container div:nth-child(3) {
+  position: relative;
+  right: 120px;
+  top: 20px;
+  z-index: -1;
+}
+#app .slider-nav {
+  width: 1200px;
+  margin: 0 auto;
 }
