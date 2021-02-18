@@ -50,13 +50,13 @@
   .background-section1-container {
     background-image: url($bg-section1);
     @include background-img;
-    position: relative;
 
     .background-section1 {
-      @include container1200;
-
+      position: relative;
+      width: 1600px;
 
       .welcome {
+        @include container1200;
         color: $text-purple;
         line-height: 2em;
 
@@ -73,7 +73,7 @@
         position: absolute;
         right: 0;;
         top: 50%;
-        transform: translate(-30%, -50%);
+        transform: translate(0, -50%);
         display: flex;
 
         & div:nth-child(3) {

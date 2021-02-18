@@ -97,13 +97,14 @@
   background-size: contain;
   width: 100%;
   height: 650px;
-  position: relative;
 }
 #app .background-section1-container .background-section1 {
-  width: 1200px;
-  margin: 0 auto;
+  position: relative;
+  width: 1600px;
 }
 #app .background-section1-container .background-section1 .welcome {
+  width: 1200px;
+  margin: 0 auto;
   color: #554e9e;
   line-height: 2em;
 }
@@ -119,7 +120,7 @@
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(-30%, -50%);
+  transform: translate(0, -50%);
   display: flex;
 }
 #app .background-section1-container .background-section1 .slider-container div:nth-child(3) {
