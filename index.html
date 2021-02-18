@@ -53,7 +53,20 @@
 
       <!-- section 1 -->
       <section class="background-section1-container flex-center">
+
+        <!-- IDEA: v-for here? -->
         <div class="background-section1 flex-start">
+          <div class="background-icons">
+            <img src="img/section1/slider_icon10.png" alt="abc">
+            <img src="img/section1/slider_icon14.png" alt="symbol">
+            <img src="img/section1/slider_icon11.png" alt="brush">
+            <img src="img/section1/slider_icon12.png" alt="train">
+            <img src="img/section1/slider_icon13.png" alt="lab">
+          </div>
+          <div class="prev flex-center"
+          @click="previous">
+          <i class="fas fa-angle-left"></i>
+        </div>
 
           <div class="welcome font-xl">
             <h4>Friendly Atmosphere</h4>
@@ -62,12 +75,8 @@
             <button class="uppercase active" type="button">buy this theme now</button>
           </div>
 
-          <div class="slider-container">
+          <div v-for="(image, index) in sliderSection1" class="slider-container">
 
-              <div class="prev flex-center"
-                   @click="previous">
-                <i class="fas fa-angle-left"></i>
-              </div>
               <div class="images">
                 <img :src="sliderSection1[0]">
               </div>
@@ -79,12 +88,11 @@
                 <i class="fas fa-angle-right"></i>
               </div>
 
-
           </div>
 
       </section>
       <div class="slider-nav flex-center">
-        <i v-for="(item, index) in sliderSection1"
+        <i v-for="(item, index ) in sliderSection1"
         :class="activeDot(index)"
         @click="clickedDot(index)"></i>
       </div>

@@ -76,16 +76,16 @@
 #app .navbar-top {
   width: 1200px;
   margin: 0 auto;
-  height: 150px;
+  height: 120px;
 }
 #app .navbar-top .logo img {
-  height: 150px;
+  height: 120px;
 }
 #app .navbar-top .icons-container {
   padding: 15px;
 }
 #app .navbar-top .icons-container div {
-  height: 150px;
+  height: 120px;
   align-items: center;
   padding: 0 30px;
 }
@@ -101,6 +101,16 @@
 #app .background-section1-container .background-section1 {
   position: relative;
   width: 1600px;
+  height: 650px;
+}
+#app .background-section1-container .background-section1 .background-icons {
+  position: absolute;
+  top: 20px;
+  right: 40%;
+}
+#app .background-section1-container .background-section1 .background-icons img:nth-child(2n+2) {
+  position: relative;
+  top: 60px;
 }
 #app .background-section1-container .background-section1 .welcome {
   width: 1200px;
@@ -120,12 +130,12 @@
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translate(10%, -50%);
   display: flex;
 }
-#app .background-section1-container .background-section1 .slider-container div:nth-child(3) {
+#app .background-section1-container .background-section1 .slider-container div:nth-child(2) {
   position: relative;
-  right: 120px;
+  right: 150px;
   top: 20px;
   z-index: -1;
 }
