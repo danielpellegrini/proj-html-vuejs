@@ -2,9 +2,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 // font size
+.font-xs {
+  font-size: .4em;
+}
 .font-s {
   font-size: .5em;
 }

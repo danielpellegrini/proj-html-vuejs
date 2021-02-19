@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="dist/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Fable</title>
   </head>
@@ -12,7 +16,7 @@
 
     <div id="app">
       <!-- navbar top -->
-      <nav class="navbar-top flex-btw">
+      <nav class="navbar flex-btw">
         <div class="logo">
           <img src="img/nav-icons/logo.png" alt="logo fable">
         </div>
@@ -53,9 +57,15 @@
 
       <!-- section 1 -->
       <section class="background-section1-container flex-center">
+        <!-- <div class="prev flex-center"
+             @click="previous">
+          <i class="fas fa-angle-left"></i>
+        </div> -->
 
         <!-- IDEA: v-for here? -->
+
         <div class="background-section1 flex-start">
+
           <div class="background-icons">
             <img src="img/section1/slider_icon10.png" alt="abc">
             <img src="img/section1/slider_icon14.png" alt="symbol">
@@ -63,16 +73,14 @@
             <img src="img/section1/slider_icon12.png" alt="train">
             <img src="img/section1/slider_icon13.png" alt="lab">
           </div>
-          <div class="prev flex-center"
-          @click="previous">
-          <i class="fas fa-angle-left"></i>
-        </div>
+
 
           <div class="welcome font-xl">
             <h4>Friendly Atmosphere</h4>
+
             <h1>Welcoming Place</h1>
-            <h3>For Every Child</h3>
-            <button class="uppercase active" type="button">buy this theme now</button>
+            <h1>For Every Child</h1>
+            <button class="uppercase active font-xs" type="button">buy this theme now</button>
           </div>
 
           <div v-for="(image, index) in sliderSection1" class="slider-container">
@@ -83,22 +91,32 @@
               <div class="images">
                 <img :src="sliderSection1[1]">
               </div>
-              <div class="next flex-center"
-                   @click="next">
-                <i class="fas fa-angle-right"></i>
-              </div>
+
 
           </div>
 
+          <!-- <div class="next flex-center"
+               @click="next">
+            <i class="fas fa-angle-right"></i>
+          </div> -->
+
+          <div class="slider-nav flex-center">
+            <i v-for="(item, index ) in sliderSection1"
+            :class="activeDot(index)"
+            @click="clickedDot(index)"></i>
+          </div>
       </section>
-      <div class="slider-nav flex-center">
-        <i v-for="(item, index ) in sliderSection1"
-        :class="activeDot(index)"
-        @click="clickedDot(index)"></i>
-      </div>
       <!-- end section 1 -->
 
       <!-- navbar bottom -->
+      <nav class="bottom flex-center font-l">
+        <div class="content flex-btw">
+          <h1>How to Enroll Your Child to a Class</h1>
+          <button type="button" >learn more</button>
+        </div>
+
+
+      </nav>
       <!-- end navbar bottom -->
     </div>
 

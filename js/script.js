@@ -31,9 +31,9 @@ new Vue({
 
     activeDot: function(index) {
       if (index !== this.imagesIndex) {
-        return 'fas fa-circle'
+        return 'rectangle'
       } else {
-        return 'fas fa-circle active'
+        return 'rectangle active'
       }
     },
 
