@@ -253,7 +253,7 @@
   margin: 0 auto;
 }
 #app .container-section3 .content-section3 .left-box {
-  width: 600px;
+  width: 630px;
 }
 #app .container-section3 .content-section3 .left-box button:first-of-type {
   padding: 20px;
@@ -327,4 +327,64 @@
 #app .container-section3 .content-section3 .right-box .slider-thumbnails img {
   margin: 0 5px;
   width: calc(100% - 5px);
+}
+#app .container-section4 {
+  padding: 80px;
+}
+#app .container-section4 .content-section4 {
+  width: 1300px;
+  margin: 0 auto;
+}
+#app .container-section4 .content-section4 h1 {
+  color: #554e9e;
+  font-size: 2em;
+}
+#app .container-section4 .content-section4 h6 {
+  opacity: 0.3;
+  font-weight: 700;
+}
+#app .container-section4 .content-section4 .divider {
+  margin: 20px 0 40px 0;
+}
+#app .container-section4 .content-section4 .left-box {
+  width: 600px;
+  margin-right: 25px;
+}
+#app .container-section4 .content-section4 .left-box h3 {
+  font-weight: 600;
+  color: #554e9e;
+  font-size: 1em;
+}
+#app .container-section4 .content-section4 .right-box {
+  width: 600px;
+}
+#app .container-section4 .content-section4 .right-box p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  line-height: 1.8em;
+}
+#app .container-section4 .content-section4 .table {
+  flex-wrap: wrap;
+}
+#app .container-section4 .content-section4 .card {
+  width: 600px;
+  height: 220px;
+  margin: 15px 15px;
+  background-color: #554e9e;
+  color: #fff;
+}
+#app .container-section4 .content-section4 .card .card-info-top {
+  align-self: flex-start;
+}
+#app .container-section4 .content-section4 .card .card-info-top h5 {
+  font-weight: 700;
+}
+#app .container-section4 .content-section4 .card .card-info-top span {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+}
+#app .container-section4 .content-section4 .card img {
+  height: 220px;
 }

@@ -38,9 +38,21 @@
   background-color: $orange;
   color: #fff;
 }
+@mixin h1 {
+  color: $purple;
+  font-size: 2em;
+}
+@mixin h3 {
+  font-weight: 600;
+  color: $purple;
+}
 @mixin h4 {
   font-weight: 500;
   color: $purple;
+}
+@mixin h6 {
+  opacity: .3;
+  font-weight: 700;
 }
 @mixin p {
   font-size: .5em;
@@ -199,13 +211,11 @@
       text-align: center;
 
       h1 {
-        color: $purple;
-        font-size: 2em;
+        @include h1;
       }
 
       h6 {
-        opacity: .3;
-        font-weight: 700;
+        @include h6;
       }
 
       .divider {
@@ -263,7 +273,7 @@
       // text-align: left;
 
       .left-box {
-        width: 600px;
+        width: 630px;
 
         button:first-of-type {
           @include button-orange;
@@ -289,8 +299,7 @@
         }
 
         h3 {
-          font-weight: 600;
-          color: $purple;
+          @include h3;
           margin: 50px 0;
         }
 
@@ -348,9 +357,85 @@
 
         }
 
-
-
       } //right box
+    }
+  }
+
+  .container-section4 {
+    padding: 80px;
+    // text-align: left;
+
+    .content-section4 {
+      @include container1300;
+
+      h1 {
+        @include h1;
+      }
+
+      h6 {
+        @include h6;
+      }
+
+      .divider {
+        margin: 20px 0 40px 0;
+      }
+
+      .left-box {
+        width: 600px;
+        margin-right: 25px;
+
+
+        h3 {
+          @include h3;
+          font-size: 1em;
+        }
+
+      }
+
+      .right-box {
+        width: 600px;
+
+        p {
+          @include p;
+          line-height: 1.8em;
+        }
+
+      }
+
+      .table {
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 600px;
+        height: 220px;
+        margin: 15px 15px;
+        @include bg-purple;
+
+        .card-info-top {
+          align-self: flex-start;
+
+          h5 {
+            font-weight: 700;
+          }
+
+          span {
+            @include p;
+          }
+
+        } //card info top
+
+        .card-info-bottom {
+          // align-self: flex-end;
+        }
+
+        img {
+          height: 220px;
+        }
+      }
+
+
+
     }
   }
 
