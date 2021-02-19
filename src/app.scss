@@ -38,6 +38,15 @@
   background-color: $orange;
   color: #fff;
 }
+@mixin h4 {
+  font-weight: 500;
+  color: $purple;
+}
+@mixin p {
+  font-size: .5em;
+  font-weight: 600;
+  opacity: .6;
+}
 
 #app {
   width: 100vw;
@@ -229,12 +238,11 @@
 
           h4 {
             padding: 20px 0;
-            font-weight: 500;
-            color: $purple;
+            @include h4;
           }
 
           p {
-            font-size: .5em;
+            @include p;
           }
 
         } //card content
@@ -252,7 +260,7 @@
 
     .content-section3 {
       @include container1300;
-      text-align: left;
+      // text-align: left;
 
       .left-box {
         width: 700px;
@@ -286,11 +294,40 @@
           margin: 30px 0;
         }
 
-      }
+        .card-container {
+
+          display: flex;
+          // flex-flow: column;
+
+          h4 {
+            @include h4;
+            font-weight: 600;
+          }
+
+          p {
+            @include p;
+            margin: 15px 0;
+          }
+
+          .icon-container {
+            width: 50px;
+            height: 50px;
+            padding: 40px;
+            border-radius: 50%;
+            @include bg-orange;
+          }
+
+          .card-info {
+            margin-left: 30px;
+          }
+
+        } //card container
+
+      } //left box
       .right-box {
         width: 700px;
 
-      }
+      } //right box
     }
   }
 
