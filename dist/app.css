@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .flex-start {
@@ -96,63 +97,66 @@
 #app .navbar .icons-container div:hover {
   background-color: #fe6601;
 }
-#app .background-section1-container {
+#app .container-section1 {
   background-image: url("../img/section1/slider_slide2_background.png");
   background-size: contain;
   width: 100%;
   padding: 50px;
   position: relative;
 }
-#app .background-section1-container .background-section1 {
+#app .container-section1 .content-section1 {
   position: relative;
   width: 1600px;
   height: 650px;
 }
-#app .background-section1-container .background-section1 .background-icons {
+#app .container-section1 .content-section1 .background-icons {
   position: absolute;
   top: 0;
   right: 50%;
 }
-#app .background-section1-container .background-section1 .background-icons img:nth-child(2n+2) {
+#app .container-section1 .content-section1 .background-icons img:nth-child(2n+2) {
   position: relative;
   top: 60px;
 }
-#app .background-section1-container .background-section1 .welcome {
+#app .container-section1 .content-section1 .welcome {
   width: 1300px;
   margin: 0 auto;
   color: #554e9e;
   line-height: 2em;
 }
-#app .background-section1-container .background-section1 .welcome h1:first-of-type {
+#app .container-section1 .content-section1 .welcome h1:first-of-type {
   font-weight: 800;
 }
-#app .background-section1-container .background-section1 .welcome h4 {
+#app .container-section1 .content-section1 .welcome h4 {
   color: #fe6601;
   font-family: "Indie Flower", cursive;
   font-weight: normal;
 }
-#app .background-section1-container .background-section1 .welcome button {
+#app .container-section1 .content-section1 .welcome button {
   padding: 20px;
   border: none;
   cursor: pointer;
+  outline-width: 0;
+  background-color: #fe6601;
+  color: #fff;
 }
-#app .background-section1-container .background-section1 .slider-container {
+#app .container-section1 .content-section1 .slider-container {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(10%, -50%);
   display: flex;
 }
-#app .background-section1-container .background-section1 .slider-container div:nth-child(2) {
+#app .container-section1 .content-section1 .slider-container div:nth-child(2) {
   position: relative;
   right: 170px;
   top: 40px;
   z-index: -1;
 }
-#app .background-section1-container .background-section1 .slider-container div:nth-child(2) img {
+#app .container-section1 .content-section1 .slider-container div:nth-child(2) img {
   height: 80%;
 }
-#app .background-section1-container .background-section1 .slider-container img {
+#app .container-section1 .content-section1 .slider-container img {
   height: 700px;
 }
 #app .slider-nav {
@@ -179,9 +183,62 @@
   margin: 0 auto;
 }
 #app .bottom .content button {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   background: none;
-  border: 1px solid #fff;
+  color: #fff;
+  border: 3px solid #fff;
+  outline-width: 0;
+  font-weight: 500;
+}
+#app .bottom .content button i {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+#app .container-section2 {
+  padding: 80px;
+}
+#app .container-section2 .content-section2 {
+  width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+#app .container-section2 .content-section2 h1 {
+  color: #554e9e;
+  font-size: 2em;
+}
+#app .container-section2 .content-section2 h6 {
+  opacity: 0.3;
+  font-weight: 700;
+}
+#app .container-section2 .content-section2 .divider {
+  margin-top: 20px;
+}
+#app .container-section2 .content-section2 .divider img {
+  height: 20px;
+}
+#app .container-section2 .content-section2 .cards-container {
+  margin-top: 50px;
+}
+#app .container-section2 .content-section2 .cards-container .card-content {
+  padding: 20px;
+}
+#app .container-section2 .content-section2 .cards-container .card-content .icon-container {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: #fe6601;
+  color: #fff;
+}
+#app .container-section2 .content-section2 .cards-container .card-content .icon-container img {
+  height: 80px;
+}
+#app .container-section2 .content-section2 .cards-container .card-content h4 {
+  padding: 20px 0;
+  font-weight: 500;
+  color: #554e9e;
+}
+#app .container-section2 .content-section2 .cards-container .card-content p {
+  font-size: 0.5em;
 }

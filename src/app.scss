@@ -14,10 +14,21 @@
   width: 100%;
   // height: 780px;
 }
-@mixin button {
+@mixin button-orange {
   padding: 20px;
   border: none;
   cursor: pointer;
+  outline-width: 0;
+  @include bg-orange;
+}
+@mixin button-purple {
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  border: 3px solid #fff;
+  outline-width: 0;
 }
 @mixin bg-purple {
   background-color: $purple;
@@ -61,13 +72,13 @@
 
   } //end navbar
 
-  .background-section1-container {
+  .container-section1 {
     background-image: url($bg-section1);
     @include background-img;
     padding: 50px;
     position: relative;
 
-    .background-section1 {
+    .content-section1 {
       position: relative;
       width: 1600px;
       height: 650px;
@@ -99,7 +110,7 @@
         }
 
         button {
-          @include button;
+          @include button-orange;
         }
       } //welcome
 
@@ -127,10 +138,10 @@
 
       }
 
-    } //background-section1
+    } //content-section1
 
 
-  } //background-section1-container
+  } //container-section1
 
   .slider-nav {
     // @include container1300;
@@ -158,10 +169,79 @@
       @include container1300;
 
       button {
-        @include button;
-        background: none;
-        border: 1px solid #fff;
+        @include button-purple;
+        font-weight: 500;
+
+        i {
+          vertical-align: middle;
+          margin-left: 10px;
+
+        }
       }
+    }
+
+  }
+
+  .container-section2 {
+    padding: 80px;
+
+    .content-section2 {
+      @include container1300;
+      text-align: center;
+
+      h1 {
+        color: $purple;
+        font-size: 2em;
+      }
+
+      h6 {
+        opacity: .3;
+        font-weight: 700;
+      }
+
+      .divider {
+        margin-top: 20px;
+
+        img {
+          height: 20px;
+        }
+      }
+
+      .cards-container {
+        margin-top: 50px;
+
+        .card-content {
+
+          // width: 280px;
+          padding: 20px;
+
+         .icon-container {
+          width: 220px;
+          height: 220px;
+          border-radius: 50%;
+          @include bg-orange;
+
+            img {
+              height: 80px;
+            }
+
+          } //icon container
+
+          h4 {
+            padding: 20px 0;
+            font-weight: 500;
+            color: $purple;
+          }
+
+          p {
+            font-size: .5em;
+          }
+
+        } //card content
+
+      }//cards container
+
+
     }
 
   }

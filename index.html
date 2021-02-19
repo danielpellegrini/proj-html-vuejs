@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <!-- Google fonts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -56,7 +56,7 @@
       <!-- end navbar top -->
 
       <!-- section 1 -->
-      <section class="background-section1-container flex-center">
+      <section class="container-section1 flex-center">
         <!-- <div class="prev flex-center"
              @click="previous">
           <i class="fas fa-angle-left"></i>
@@ -64,7 +64,7 @@
 
         <!-- IDEA: v-for here? -->
 
-        <div class="background-section1 flex-start">
+        <div class="content-section1 flex-start">
 
           <div class="background-icons">
             <img src="img/section1/slider_icon10.png" alt="abc">
@@ -80,7 +80,7 @@
 
             <h1>Welcoming Place</h1>
             <h1>For Every Child</h1>
-            <button class="uppercase active font-xs" type="button">buy this theme now</button>
+            <button class="uppercase font-xs" type="button">buy this theme now</button>
           </div>
 
           <div v-for="(image, index) in sliderSection1" class="slider-container">
@@ -110,14 +110,68 @@
 
       <!-- navbar bottom -->
       <nav class="bottom flex-center font-l">
-        <div class="content flex-btw">
-          <h1>How to Enroll Your Child to a Class</h1>
-          <button type="button" >learn more</button>
-        </div>
 
+        <div class="content flex-btw">
+          <h1>How to Enroll Your Child to a Class?</h1>
+          <button type="button" class="font-sm">learn more<i class="fas fa-angle-right"></i></button>
+        </div>
 
       </nav>
       <!-- end navbar bottom -->
+
+      <!-- section 2 -->
+      <section class="container-section2 flex-center">
+
+          <div class="content-section2 font-l flex-column">
+
+            <h1>Welcome to Fable</h1>
+            <h6>Fable daycare, preschool, and kindergarten</h6>
+
+
+            <div class="divider">
+              <img src="img/header_divider.png" alt="divider">
+            </div>
+
+            <div class="cards-container flex-center">
+
+              <div class="card-content flex-column">
+                <div class="icon-container flex-center">
+                  <img src="img/section2/schoolbag_alt.png" alt="schoolbag">
+                </div>
+                <h4>Morbi Etos</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="card-content flex-column">
+                <div class="icon-container flex-center">
+                  <img src="img/section2/stroller_alt.png" alt="stroller">
+                </div>
+                <h4>Congue Gravida</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="card-content flex-column">
+                <div class="icon-container flex-center">
+                  <img src="img/section2/globe_alt.png" alt="globe">
+                </div>
+                <h4>Maecenas Node</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="card-content flex-column">
+                <div class="icon-container flex-center">
+                  <img src="img/section2/bell_alt.png" alt="bell">
+                </div>
+                <h4>Praesant Morbi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+      </section>
+      <!-- end section 2 -->
     </div>
 
 
