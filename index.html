@@ -174,12 +174,12 @@
       <!-- end section 2 -->
 
       <!-- section 3 -->
-      <section class="container-section3 flex-center">
+      <section class="container-section3">
 
-          <div class="content-section3 font-l">
+          <div class="content-section3 font-l flex-btw">
 
             <!-- left box -->
-            <div class="left-box felx-start">
+            <div class="left-box">
               <button class="font-sm" type="button">Overview</button>
               <button class="font-sm" type="button">Our Mission</button>
 
@@ -211,7 +211,31 @@
             <!-- end left box -->
 
             <!-- right box -->
-            <div class="right-box">
+            <div class="right-box flex-column">
+
+              <div class="slider-container flex-center">
+
+                <div class="prev"
+                     @click="previous">
+                  <i class="fas fa-angle-left"></i>
+                </div>
+
+                <div class="images">
+                  <img src="img/section3/gallery_08-690x506.jpg">
+                </div>
+
+                <div class="next"
+                     @click="next">
+                  <i class="fas fa-angle-right"></i>
+                </div>
+              </div>
+
+              <div class="slider-thumbnails flex-center">
+                <img src="img/section3/gallery_08-690x506.jpg">
+                <img src="img/section3/gallery_08-690x506.jpg">
+                <img src="img/section3/gallery_08-690x506.jpg">
+              </div>
+              <div class="border"></div>
 
             </div>
             <!-- end right box -->

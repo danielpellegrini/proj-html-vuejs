@@ -253,7 +253,7 @@
   margin: 0 auto;
 }
 #app .container-section3 .content-section3 .left-box {
-  width: 700px;
+  width: 600px;
 }
 #app .container-section3 .content-section3 .left-box button:first-of-type {
   padding: 20px;
@@ -288,7 +288,7 @@
 #app .container-section3 .content-section3 .left-box h3 {
   font-weight: 600;
   color: #554e9e;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 #app .container-section3 .content-section3 .left-box .card-container {
   display: flex;
@@ -316,5 +316,15 @@
   margin-left: 30px;
 }
 #app .container-section3 .content-section3 .right-box {
-  width: 700px;
+  width: 600px;
+}
+#app .container-section3 .content-section3 .right-box .slider-container .images img {
+  height: 444px;
+}
+#app .container-section3 .content-section3 .right-box .slider-thumbnails {
+  width: 33.333%;
+}
+#app .container-section3 .content-section3 .right-box .slider-thumbnails img {
+  margin: 0 5px;
+  width: calc(100% - 5px);
 }
