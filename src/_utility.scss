@@ -36,10 +36,20 @@
 
 
 // FLEXBOX
+.flex-start {
+  display: flex;
+  align-items: center;
+}
 
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -48,17 +58,6 @@
   flex-direction: column;
   justify-content: center;
   align-items:  center;
-}
-
-.flex-start {
-  display: flex;
-  align-items: center;
-}
-
-.flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .flex-btw {
