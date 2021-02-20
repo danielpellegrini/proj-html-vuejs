@@ -344,7 +344,7 @@
   font-weight: 700;
 }
 #app .container-section4 .content-section4 .divider {
-  margin: 20px 0 40px 0;
+  margin: 20px 0 40px;
 }
 #app .container-section4 .content-section4 .left-box {
   width: 600px;
@@ -367,24 +367,66 @@
 #app .container-section4 .content-section4 .table {
   flex-wrap: wrap;
 }
-#app .container-section4 .content-section4 .card {
+#app .container-section4 .content-section4 .table .card {
   width: 600px;
   height: 220px;
-  margin: 15px 15px;
+  margin: 15px;
   background-color: #554e9e;
   color: #fff;
+  position: relative;
 }
-#app .container-section4 .content-section4 .card .card-info-top {
+#app .container-section4 .content-section4 .table .card .card-info-container {
+  line-height: 0.7em;
+  height: 220px;
+  width: 300px;
+  justify-content: space-around;
+  align-content: center;
+}
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-top {
+  text-align: left;
   align-self: flex-start;
+  padding-left: 25px;
 }
-#app .container-section4 .content-section4 .card .card-info-top h5 {
-  font-weight: 700;
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom h5,
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-top h5 {
+  font-weight: 600;
 }
-#app .container-section4 .content-section4 .card .card-info-top span {
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom span,
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-top span {
   font-size: 0.5em;
   font-weight: 600;
   opacity: 0.6;
 }
-#app .container-section4 .content-section4 .card img {
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom {
+  text-align: center;
+}
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom h6 {
+  font-weight: 500;
+  opacity: 1;
+}
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom .card-info-bottom-left {
+  border-right: 1px solid lightgrey;
+  padding-right: 25px;
+}
+#app .container-section4 .content-section4 .table .card .card-info-container .card-info-bottom .card-info-bottom-right {
+  padding-left: 25px;
+}
+#app .container-section4 .content-section4 .table .card img {
   height: 220px;
+}
+#app .container-section4 .content-section4 .table .card button {
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #fe6601;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+#app .container-section4 .content-section4 .table .card button i {
+  vertical-align: middle;
 }

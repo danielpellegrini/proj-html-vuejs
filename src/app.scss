@@ -1,7 +1,5 @@
 @import "utility";
 @import "var";
-
-
 @mixin container1300 {
   width: 1300px;
   margin: 0 auto;
@@ -51,13 +49,13 @@
   color: $purple;
 }
 @mixin h6 {
-  opacity: .3;
+  opacity: 0.3;
   font-weight: 700;
 }
 @mixin p {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: 600;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 #app {
@@ -65,33 +63,30 @@
   height: 100vh;
   overflow-x: hidden;
 
-  .navbar { //top navbar
+  .navbar {
+    //top navbar
     @include container1300;
     @include navbarheight;
     // background-color: #d7ac95;
-
     .logo img {
       @include navbarheight;
     }
 
     .icons-container {
       // padding: 15px;
-
       div {
         @include navbarheight;
         align-items: center;
-        padding:  0 30px;
-
+        padding: 0 30px;
       }
 
       div:hover {
         background-color: #fe6601;
       }
-
-    } //end icons container
-
-
-  } //end navbar
+    }
+    //end icons container
+  }
+  //end navbar
 
   .container-section1 {
     background-image: url($bg-section1);
@@ -133,7 +128,8 @@
         button {
           @include button-orange;
         }
-      } //welcome
+      }
+      //welcome
 
       .slider-container {
         position: absolute;
@@ -142,7 +138,8 @@
         transform: translate(10%, -50%);
         display: flex;
 
-        & div:nth-child(2) { //rear image
+        & div:nth-child(2) {
+          //rear image
           position: relative;
           right: 170px;
           top: 40px;
@@ -153,16 +150,15 @@
           }
         }
 
-        & img { //front image
+        & img {
+          //front image
           height: 700px;
         }
-
       }
-
-    } //content-section1
-
-
-  } //container-section1
+    }
+    //content-section1
+  }
+  //container-section1
 
   .slider-nav {
     // @include container1300;
@@ -178,8 +174,8 @@
       border: 3px solid $orange;
       margin-right: 10px;
     }
-
-  } //end slider bottom section1
+  }
+  //end slider bottom section1
 
   .bottom {
     @include bg-purple;
@@ -196,11 +192,9 @@
         i {
           vertical-align: middle;
           margin-left: 10px;
-
         }
       }
     }
-
   }
 
   .container-section2 {
@@ -230,21 +224,20 @@
         margin-top: 50px;
 
         .card-content {
-
           // width: 280px;
           padding: 20px;
 
-         .icon-container {
-          width: 220px;
-          height: 220px;
-          border-radius: 50%;
-          @include bg-orange;
+          .icon-container {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            @include bg-orange;
 
             img {
               height: 80px;
             }
-
-          } //icon container
+          }
+          //icon container
 
           h4 {
             padding: 20px 0;
@@ -254,14 +247,11 @@
           p {
             @include p;
           }
-
-        } //card content
-
-      }//cards container
-
-
+        }
+        //card content
+      }
+      //cards container
     }
-
   }
 
   .container-section3 {
@@ -271,7 +261,6 @@
     .content-section3 {
       @include container1300;
       // text-align: left;
-
       .left-box {
         width: 630px;
 
@@ -284,7 +273,7 @@
         button:last-of-type {
           margin-left: 10px;
           outline-width: 0;
-          opacity: .3;
+          opacity: 0.3;
           font-weight: 600;
           background: none;
           border: none;
@@ -304,10 +293,8 @@
         }
 
         .card-container {
-
           display: flex;
           // flex-flow: column;
-
           h4 {
             @include h4;
             font-weight: 600;
@@ -329,18 +316,17 @@
           .card-info {
             margin-left: 30px;
           }
-
-        } //card container
-
-      } //left box
+        }
+        //card container
+      }
+      //left box
 
       .right-box {
         width: 600px;
 
         .slider-container {
-
           .images {
-            img{
+            img {
               height: 444px;
             }
           }
@@ -352,18 +338,15 @@
           img {
             margin: 0 5px;
             width: calc(100% - 5px);
-
           }
-
         }
-
-      } //right box
+      }
+      //right box
     }
   }
 
   .container-section4 {
     padding: 80px;
-    // text-align: left;
 
     .content-section4 {
       @include container1300;
@@ -377,19 +360,17 @@
       }
 
       .divider {
-        margin: 20px 0 40px 0;
+        margin: 20px 0 40px;
       }
 
       .left-box {
         width: 600px;
         margin-right: 25px;
 
-
         h3 {
           @include h3;
           font-size: 1em;
         }
-
       }
 
       .right-box {
@@ -399,48 +380,89 @@
           @include p;
           line-height: 1.8em;
         }
-
       }
 
       .table {
         flex-wrap: wrap;
-      }
 
-      .card {
-        width: 600px;
-        height: 220px;
-        margin: 15px 15px;
-        @include bg-purple;
-
-        .card-info-top {
-          align-self: flex-start;
-
-          h5 {
-            font-weight: 700;
-          }
-
-          span {
-            @include p;
-          }
-
-        } //card info top
-
-        .card-info-bottom {
-          // align-self: flex-end;
-        }
-
-        img {
+        .card {
+          width: 600px;
           height: 220px;
+          margin: 15px;
+          @include bg-purple;
+          position: relative;
+
+          .card-info-container {
+            line-height: 0.7em;
+            height: 220px;
+            width: 300px;
+            justify-content: space-around;
+            align-content: center;
+
+            .card-info-top {
+              text-align: left;
+              align-self: flex-start;
+              padding-left: 25px;
+            }
+
+            .card-info-bottom,
+            .card-info-top {
+              h5 {
+                font-weight: 600;
+              }
+
+              span {
+                @include p;
+              }
+            }
+            //card info top/bottom
+
+            .card-info-bottom {
+              text-align: center;
+
+              h6 {
+                font-weight: 500;
+                opacity: 1;
+              }
+
+              .card-info-bottom-left {
+                border-right: 1px solid lightgrey;
+                padding-right: 25px;
+              }
+
+              .card-info-bottom-right {
+                padding-left: 25px;
+              }
+            }
+            //card info bottom
+          }
+          //card info container
+
+          img {
+            height: 220px;
+          }
+
+          button {
+            @include button-orange;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-weight: 600;
+            padding: 15px 20px;
+
+            i {
+              vertical-align: middle;
+            }
+
+          }
+
         }
+        //card
       }
+      //table
+    } //content section4
 
+  } //container section4
 
-
-    }
-  }
-
-
-
-
-
-} //end app
+}
+//end app
