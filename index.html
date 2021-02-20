@@ -105,6 +105,7 @@
             :class="activeDot(index)"
             @click="clickedDot(index)"></i>
           </div>
+
         </div>
       </section>
       <!-- end section 1 -->
@@ -470,6 +471,34 @@
 
       </nav>
       <!-- end navbar bottom -->
+
+      <!-- section 7 -->
+      <section class="container-section7 font-l">
+
+        <div class="content-section7 flex-column">
+
+
+        <div class="icon-container flex-center">
+          <img src="img/section7/quote_alt.png" alt="quote">
+        </div>
+
+        <div class="text-container flex-column">
+          <h1>I have to say that I have children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the very best I have ever used.</h1>
+          <h6>Cecil J. Kirk</h6>
+        </div>
+
+        <div class="slider-section7 flex-center">
+          <i v-for="(item, index ) in sliderSection1"
+          :class="activeDot(index)"
+          @click="clickedDot(index)"></i>
+        </div>
+
+
+      </div>
+
+
+      </section>
+      <!-- end section 7 -->
 
     </div>
     <!-- end app -->

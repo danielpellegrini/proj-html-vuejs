@@ -511,3 +511,52 @@
 #app .container-section6 img {
   width: 25%;
 }
+#app .container-section7 {
+  padding: 80px;
+  width: 100%;
+  background-image: url("../img/section7/parallax_02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#app .container-section7 .content-section7 {
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+#app .container-section7 .content-section7 .icon-container {
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+#app .container-section7 .content-section7 .text-container {
+  margin: 25px 0;
+  text-align: center;
+}
+#app .container-section7 .content-section7 .text-container h1 {
+  font-size: 1.4em;
+  color: white;
+}
+#app .container-section7 .content-section7 .text-container h1::after {
+  content: "";
+  display: inherit;
+  width: 50px;
+  border-bottom: 1px solid white;
+  margin: 25px auto;
+}
+#app .container-section7 .content-section7 .text-container h6 {
+  color: white;
+  font-weight: 500;
+}
+#app .container-section7 .content-section7 .slider-section7 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+}
+#app .container-section7 .content-section7 .slider-section7 .rectangle {
+  width: 50px;
+  height: 15px;
+  background-color: none;
+  border: 3px solid white;
+  margin-right: 10px;
+}

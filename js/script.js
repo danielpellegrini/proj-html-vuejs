@@ -33,7 +33,7 @@ new Vue({
       if (index !== this.imagesIndex) {
         return 'rectangle'
       } else {
-        return 'rectangle active'
+        return 'rectangle'
       }
     },
 
