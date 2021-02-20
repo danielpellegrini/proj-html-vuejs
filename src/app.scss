@@ -198,11 +198,15 @@
         font-weight: 500;
 
         i {
-          vertical-align: middle;
+          // vertical-align: middle;
           margin-left: 10px;
         }
       }
     }
+  }
+
+  .bg {
+    background-image: url($bg-bottom);
   }
 
   .container-section2 {
@@ -558,6 +562,14 @@
     } //content section5
 
   } //container section5
+
+  .container-section6 {
+    width: 100%;
+
+    img {
+      width: 25%;
+    }
+  }
 
 }
 //end app

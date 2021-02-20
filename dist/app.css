@@ -194,8 +194,10 @@
   font-weight: 500;
 }
 #app .bottom .content button i {
-  vertical-align: middle;
   margin-left: 10px;
+}
+#app .bg {
+  background-image: url("../img/bg-bottom/pattern.png");
 }
 #app .container-section2 {
   padding: 80px;
@@ -502,4 +504,10 @@
   font-size: 0.5em;
   font-weight: 600;
   opacity: 0.6;
+}
+#app .container-section6 {
+  width: 100%;
+}
+#app .container-section6 img {
+  width: 25%;
 }
