@@ -4,6 +4,7 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  list-style-type: none;
 }
 
 .font-xs {
@@ -216,7 +217,7 @@
   margin-top: 20px;
 }
 #app .container-section2 .content-section2 .divider img {
-  height: 20px;
+  height: 15px;
 }
 #app .container-section2 .content-section2 .cards-container {
   margin-top: 50px;
@@ -344,11 +345,15 @@
   font-weight: 700;
 }
 #app .container-section4 .content-section4 .divider {
-  margin: 20px 0 40px;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+#app .container-section4 .content-section4 .divider img {
+  height: 15px;
 }
 #app .container-section4 .content-section4 .left-box {
-  width: 600px;
-  margin-right: 25px;
+  width: 50%;
+  margin: 0 45px 45px 0;
 }
 #app .container-section4 .content-section4 .left-box h3 {
   font-weight: 600;
@@ -356,7 +361,8 @@
   font-size: 1em;
 }
 #app .container-section4 .content-section4 .right-box {
-  width: 600px;
+  width: 50%;
+  margin: 0 0 45px 0;
 }
 #app .container-section4 .content-section4 .right-box p {
   font-size: 0.5em;
@@ -367,10 +373,12 @@
 #app .container-section4 .content-section4 .table {
   flex-wrap: wrap;
 }
+#app .container-section4 .content-section4 .table .card:nth-child(2n+2) {
+  margin-left: 45px;
+}
 #app .container-section4 .content-section4 .table .card {
-  width: 600px;
-  height: 220px;
-  margin: 15px;
+  margin-bottom: 45px;
+  align-self: center;
   background-color: #554e9e;
   color: #fff;
   position: relative;
@@ -378,9 +386,8 @@
 #app .container-section4 .content-section4 .table .card .card-info-container {
   line-height: 0.7em;
   height: 220px;
-  width: 300px;
+  width: 325px;
   justify-content: space-around;
-  align-content: center;
 }
 #app .container-section4 .content-section4 .table .card .card-info-container .card-info-top {
   text-align: left;
@@ -429,4 +436,70 @@
 }
 #app .container-section4 .content-section4 .table .card button i {
   vertical-align: middle;
+}
+#app .container-section5 {
+  padding: 80px;
+  background-color: #f8f6f7;
+}
+#app .container-section5 .content-section5 {
+  width: 1300px;
+  margin: 0 auto;
+}
+#app .container-section5 .content-section5 .left-box {
+  width: 50%;
+  padding-right: 20px;
+}
+#app .container-section5 .content-section5 .left-box h3 {
+  font-weight: 600;
+  color: #554e9e;
+  font-size: 1em;
+}
+#app .container-section5 .content-section5 .left-box p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  margin: 45px 0;
+}
+#app .container-section5 .content-section5 .left-box ul {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  line-height: 2.2em;
+  opacity: 1;
+}
+#app .container-section5 .content-section5 .left-box ul li {
+  font-weight: 400;
+}
+#app .container-section5 .content-section5 .left-box ul li i {
+  font-size: 1.2em;
+  padding-right: 15px;
+  color: #fe6601;
+}
+#app .container-section5 .content-section5 .right-box {
+  align-self: flex-start;
+  width: 50%;
+  padding-left: 20px;
+}
+#app .container-section5 .content-section5 .right-box .table .cards-container {
+  flex-wrap: wrap;
+}
+#app .container-section5 .content-section5 .right-box .table .cards-container .card-content {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+}
+#app .container-section5 .content-section5 .right-box .table .cards-container .card-content .icon-container {
+  padding: 30px;
+  border-radius: 50%;
+  background: white;
+}
+#app .container-section5 .content-section5 .right-box .table .cards-container .card-content h4 {
+  padding: 20px 0;
+  font-weight: 500;
+  color: #554e9e;
+}
+#app .container-section5 .content-section5 .right-box .table .cards-container .card-content p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
 }

@@ -57,6 +57,14 @@
   font-weight: 600;
   opacity: 0.6;
 }
+@mixin divider {
+  margin-top: 20px;
+
+  img {
+    height: 15px;
+  }
+
+}
 
 #app {
   width: 100vw;
@@ -213,18 +221,13 @@
       }
 
       .divider {
-        margin-top: 20px;
-
-        img {
-          height: 20px;
-        }
+        @include divider;
       }
 
       .cards-container {
         margin-top: 50px;
 
         .card-content {
-          // width: 280px;
           padding: 20px;
 
           .icon-container {
@@ -247,12 +250,13 @@
           p {
             @include p;
           }
-        }
-        //card content
-      }
-      //cards container
-    }
-  }
+        } //card content
+
+      }//cards container
+
+    } //content section 2
+
+  } //container section 2
 
   .container-section3 {
     padding: 80px;
@@ -360,12 +364,14 @@
       }
 
       .divider {
-        margin: 20px 0 40px;
+        @include divider;
+        margin-bottom: 45px;
       }
 
       .left-box {
-        width: 600px;
-        margin-right: 25px;
+        width: 50%;
+        margin: 0 45px 45px 0;
+
 
         h3 {
           @include h3;
@@ -374,7 +380,9 @@
       }
 
       .right-box {
-        width: 600px;
+        width: 50%;
+        margin: 0 0 45px 0;
+
 
         p {
           @include p;
@@ -385,19 +393,21 @@
       .table {
         flex-wrap: wrap;
 
+        & .card:nth-child(2n+2) {
+          margin-left: 45px;
+        }
+
         .card {
-          width: 600px;
-          height: 220px;
-          margin: 15px;
+          margin-bottom: 45px;
+          align-self: center;
           @include bg-purple;
           position: relative;
 
           .card-info-container {
             line-height: 0.7em;
             height: 220px;
-            width: 300px;
+            width: 325px;
             justify-content: space-around;
-            align-content: center;
 
             .card-info-top {
               text-align: left;
@@ -463,6 +473,91 @@
     } //content section4
 
   } //container section4
+
+  .container-section5 {
+    padding: 80px;
+    background-color: #f8f6f7;
+
+    .content-section5 {
+      @include container1300;
+
+      .left-box {
+        width: 50%;
+        padding-right: 20px;
+
+        h3 {
+          @include h3;
+          font-size: 1em;
+        }
+
+        p {
+          @include p;
+          margin: 45px 0;
+        }
+
+        ul {
+          @include p;
+          line-height: 2.2em;
+          opacity: 1;
+
+          li {
+            font-weight: 400;
+
+            i {
+              font-size: 1.2em;
+              padding-right: 15px;
+              color: $orange;
+            }
+
+          }
+
+        }
+
+      } //left box
+
+      .right-box {
+        align-self: flex-start;
+        width: 50%;
+        padding-left: 20px;
+
+        .table {
+
+          .cards-container {
+            flex-wrap: wrap;
+
+            .card-content {
+              width: 300px;
+              padding: 30px;
+              text-align: center;
+
+              .icon-container {
+                padding: 30px;
+                border-radius: 50%;
+                background: white;
+
+              }
+              //icon container
+
+              h4 {
+                padding: 20px 0;
+                @include h4;
+              }
+
+              p {
+                @include p;
+              }
+            } //card content
+
+          }//cards container
+
+        }
+
+
+      } //right-box
+
+    } //content section5
+
+  } //container section5
 
 }
 //end app
