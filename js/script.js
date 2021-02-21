@@ -2,14 +2,39 @@ new Vue({
   el: '#app',
   data: {
     sliderSection1: [
-
         // './img/section1/slider_slide1_img2.png',
         // './img/section1/slider_slide1_img1.png',
         './img/section1/slider_slide2_img1.png',
         './img/section1/slider_slide2_img2.png',
-
     ],
-    imagesIndex: 0
+    imagesIndex: 0,
+
+    map: [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      '13',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '23',
+      '24',   
+    ]
   },
 
   methods: {

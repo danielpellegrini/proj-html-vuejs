@@ -751,9 +751,67 @@
 
   } //container section 8
 
+  .container-section9 {
+    padding: 80px 0;
+
+    .map {
+      width: 100%;
+      position: relative;
+
+      iframe {
+        width: 100%;
+        height: 450px;
+      }
+
+      .route {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 320px;
+        height: 100px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        border-radius: 5px;
+        background-color: white;
+
+        & div:first-child {
+          padding-left: 10px;
+          align-items: flex-start;
+
+          h4 {
+            font-weight: 600;
+          }
+
+          h5 {
+            padding: 5px 0;
+          }
+
+        }
+
+        & div:last-child {
+          align-self: flex-start;
+          padding: 15px;
+          cursor: pointer;
+
+          img {
+            height: 20px;
+          }
+        }
+
+        span {
+          color: #1A73E8;
+          font-size: .8em;
+          font-weight: 600;
+        }
 
 
+      }
 
+    }
+
+
+  }
+
+  
 
 
 }
