@@ -560,3 +560,105 @@
   border: 3px solid white;
   margin-right: 10px;
 }
+#app .container-section8 {
+  padding: 80px;
+}
+#app .container-section8 .content-section8 {
+  width: 1300px;
+  margin: 0 auto;
+}
+#app .container-section8 .content-section8 h1 {
+  color: #554e9e;
+  font-size: 2em;
+}
+#app .container-section8 .content-section8 h6 {
+  opacity: 0.3;
+  font-weight: 700;
+}
+#app .container-section8 .content-section8 .divider {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+#app .container-section8 .content-section8 .divider img {
+  height: 15px;
+}
+#app .container-section8 .content-section8 .cards-container .card:nth-child(2) {
+  margin: 0 40px;
+}
+#app .container-section8 .content-section8 .cards-container .card {
+  align-items: flex-start;
+  width: calc(100% / 3);
+  line-height: 1em;
+}
+#app .container-section8 .content-section8 .cards-container .card h5 {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  opacity: 0.3;
+  font-size: 0.7em;
+}
+#app .container-section8 .content-section8 .cards-container .card .img-container {
+  position: relative;
+  margin: 25px 0;
+}
+#app .container-section8 .content-section8 .cards-container .card .img-container img {
+  width: 100%;
+}
+#app .container-section8 .content-section8 .cards-container .card .img-container .number {
+  background-color: #fe6601;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  padding: 8px 10px;
+}
+#app .container-section8 .content-section8 .cards-container .card .img-container .number h3 {
+  font-weight: 600;
+}
+#app .container-section8 .content-section8 .cards-container .card h4 {
+  font-weight: 500;
+  color: #554e9e;
+}
+#app .container-section8 .content-section8 .cards-container .card p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  padding-top: 25px;
+}
+#app .container-section8 .content-section8 .cards-container .card p span {
+  opacity: 0.4;
+  font-size: 1em;
+  font-weight: 600;
+}
+#app .container-section8 .content-section8 .cards-container .card p::after {
+  content: "";
+  display: inherit;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 25px;
+}
+#app .container-section8 .content-section8 .cards-container .card .bottom-text i:nth-child(1n+1) {
+  margin-right: 15px;
+}
+#app .container-section8 .content-section8 .cards-container .card .bottom-text h6:first-of-type {
+  margin-right: 30px;
+}
+#app .container-section8 .content-section8 .cards-container .card .bottom-text h6 {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+#app .container-section8 .content-section8 button {
+  margin-top: 55px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #fe6601;
+  color: #fff;
+  font-weight: 600;
+}
+#app .container-section8 .content-section8 button i {
+  padding-left: 15px;
+  font-size: 1.3em;
+  vertical-align: middle;
+}

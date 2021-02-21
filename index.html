@@ -477,28 +477,105 @@
 
         <div class="content-section7 flex-column">
 
+          <div class="icon-container flex-center">
+            <img src="img/section7/quote_alt.png" alt="quote">
+          </div>
 
-        <div class="icon-container flex-center">
-          <img src="img/section7/quote_alt.png" alt="quote">
+          <div class="text-container flex-column">
+            <h1>I have to say that I have children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the very best I have ever used.</h1>
+            <h6>Cecil J. Kirk</h6>
+          </div>
+
+          <div class="slider-section7 flex-center">
+            <i v-for="(item, index ) in sliderSection1"
+            :class="activeDot(index)"
+            @click="clickedDot(index)"></i>
+          </div>
+
         </div>
-
-        <div class="text-container flex-column">
-          <h1>I have to say that I have children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the very best I have ever used.</h1>
-          <h6>Cecil J. Kirk</h6>
-        </div>
-
-        <div class="slider-section7 flex-center">
-          <i v-for="(item, index ) in sliderSection1"
-          :class="activeDot(index)"
-          @click="clickedDot(index)"></i>
-        </div>
-
-
-      </div>
-
 
       </section>
       <!-- end section 7 -->
+
+      <!-- section 8 -->
+
+      <section>
+        <div class="container-section8 flex-center">
+
+          <div class="content-section8 font-l flex-column">
+            <h1>What's New</h1>
+            <h6>Keep up to date with the latest news</h6>
+            <div class="divider">
+              <img src="img/header_divider.png" alt="divider">
+            </div>
+
+            <div class="cards-container flex-center">
+
+              <div class="card flex-column">
+                <h5>October 03, 2014</h5>
+                <div class="img-container">
+                  <img src="img/section8/blog_09.jpg" alt="drawing kid">
+                  <div class="number font-sm">
+                    <h3>42</h3>
+                  </div>
+                </div>
+                <h4>Drawing and Painting Lessons</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span>[...]</span> </p>
+                <div class="bottom-text flex-start">
+                  <i><img src="img/section8/author.png" alt="author"></i>
+                  <h6>Anna Brown</h6>
+                  <i><img src="img/section8/category.png" alt="author"></i>
+                  <h6>Events, Fun</h6>
+                </div>
+              </div>
+
+              <div class="card flex-column">
+                <h5>October 03, 2014</h5>
+                <div class="img-container">
+                  <img src="img/section8/blog_10.jpg" alt="drawing kid">
+                  <div class="number font-sm">
+                    <h3>19</h3>
+                  </div>
+                </div>
+                <h4>Drawing and Painting Lessons</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span>[...]</span> </p>
+                <div class="bottom-text flex-start">
+                  <i><img src="img/section8/author.png" alt="author"></i>
+                  <h6>Anna Brown</h6>
+                  <i><img src="img/section8/category.png" alt="author"></i>
+                  <h6>Dance, Education</h6>
+                </div>
+              </div>
+
+              <div class="card flex-column">
+                <h5>September 20, 2014</h5>
+                <div class="img-container">
+                  <img src="img/section8/blog_08.jpg" alt="drawing kid">
+                  <div class="number font-sm">
+                    <h3>22</h3>
+                  </div>
+                </div>
+                <h4>Drawing and Painting Lessons</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span>[...]</span> </p>
+                <div class="bottom-text flex-start">
+                  <i><img src="img/section8/author.png" alt="author"></i>
+                  <h6>Anna Brown</h6>
+                  <i><img src="img/section8/category.png" alt="author"></i>
+                  <h6>Games, General</h6>
+                </div>
+              </div>
+
+            </div>
+
+            <button type="button" class="uppercase font-s">go to blog <i class="fas fa-angle-right"></i></button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- end section 8 -->
 
     </div>
     <!-- end app -->
