@@ -707,6 +707,7 @@
   font-weight: 600;
 }
 #app .container-footer .content-footer {
+  padding-bottom: 80px;
   width: 1300px;
   margin: 0 auto;
 }
@@ -726,9 +727,12 @@
 #app .container-footer .content-footer .divider img {
   height: 15px;
 }
+#app .container-footer .content-footer .cards-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
 #app .container-footer .content-footer .cards-container .card {
   width: 300px;
-  padding: 30px;
   text-align: center;
   line-height: 1em;
 }
@@ -748,8 +752,41 @@
 }
 #app .container-footer .content-footer form {
   width: 100%;
+  flex-wrap: wrap;
 }
-#app .container-footer .content-footer form input:nth-child(5n-1) {
+#app .container-footer .content-footer form .left-side {
+  width: 45%;
+  height: 250px;
+  justify-content: space-between;
+}
+#app .container-footer .content-footer form .left-side input {
+  border-radius: 5px;
+  outline-color: #fe6601;
+  border: 0.1px solid lightgrey;
   width: 100%;
-  line-height: 10em;
+  font-size: 0.7em;
+  margin-right: 20px;
+  padding: 10px;
+}
+#app .container-footer .content-footer form .right-side {
+  width: 45%;
+}
+#app .container-footer .content-footer form .right-side input {
+  border-radius: 5px;
+  outline-color: #fe6601;
+  border: 0.1px solid lightgrey;
+  width: 100%;
+  font-size: 0.7em;
+  margin-left: 20px;
+  padding: 10px 0 210px 10px;
+}
+#app .container-footer .content-footer form button {
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #fe6601;
+  color: #fff;
+  margin-top: 30px;
+  font-weight: 600;
 }

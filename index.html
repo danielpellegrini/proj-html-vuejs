@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <!-- Google fonts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Fable</title>
@@ -615,7 +615,7 @@
             <img src="img/header_divider.png" alt="divider">
           </div>
 
-          <div class="cards-container flex-center">
+          <div class="cards-container flex-btw">
 
             <div class="card flex-column">
               <div class="icon-container flex-center">
@@ -659,13 +659,21 @@
 
           </div>
 
-          <!-- <form class="flex-center" method="post" >
-            <input placeholder="Your Name *" type="text">
-            <input placeholder="Your E-mail *" type="email">
-            <input placeholder="Subject" type="text">
-            <input placeholder="Your Message *" type="text">
-            <input type="submit" name="send message">
-          </form> -->
+          <form class="flex-center" method="post">
+
+            <div class="left-side flex-column">
+              <input placeholder="Your Name *" type="text" required>
+              <input placeholder="Your E-mail *" type="email" required>
+              <input placeholder="Subject" type="text">
+            </div>
+
+            <div class="right-side">
+              <input  placeholder="Your Message *" type="text" required>
+            </div>
+
+            <button class="font-sm" type="submit" name="Send">send message</button>
+
+          </form>
 
         </div>
 

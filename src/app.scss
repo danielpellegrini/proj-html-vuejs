@@ -65,6 +65,13 @@
   }
 
 }
+@mixin input {
+  border-radius: 5px;
+  outline-color: $orange;
+  border: .1px solid lightgrey;
+  width: 100%;
+  font-size: .7em;
+}
 
 #app {
   width: 100vw;
@@ -816,6 +823,7 @@
     // padding: 80px;
 
     .content-footer {
+      padding-bottom: 80px;
       @include container1300;
 
       h1 {
@@ -833,10 +841,12 @@
       }
 
       .cards-container {
+        width: 100%;
+        margin-bottom: 30px;
 
         .card {
           width: 300px;
-          padding: 30px;
+          // padding: 30px;
           text-align: center;
           line-height: 1em;
 
@@ -860,11 +870,36 @@
 
       form {
         width: 100%;
+        flex-wrap: wrap;
 
+        .left-side {
+          width: 45%;
+          height: 250px;
+          justify-content: space-between;
 
-        input:nth-child(5n-1) {
-          width: 100%;
-          line-height: 10em;
+          input {
+            @include input;
+            margin-right: 20px;
+            padding: 10px;
+
+          }
+        }
+
+        .right-side {
+          width: 45%;
+
+          input {
+            @include input;
+            margin-left: 20px;
+            padding: 10px 0 210px 10px;
+
+          }
+        }
+
+        button {
+          @include button-orange;
+          margin-top: 30px;
+          font-weight: 600;
         }
 
       }
