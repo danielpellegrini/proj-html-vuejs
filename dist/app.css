@@ -231,11 +231,15 @@
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background-color: #fe6601;
+  background-color: #554e9e;
   color: #fff;
 }
 #app .container-section2 .content-section2 .cards-container .card-content .icon-container img {
   height: 80px;
+}
+#app .container-section2 .content-section2 .cards-container .card-content:nth-child(2n+1) .icon-container {
+  background-color: #fe6601;
+  color: #fff;
 }
 #app .container-section2 .content-section2 .cards-container .card-content h4 {
   padding: 20px 0;

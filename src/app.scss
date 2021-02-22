@@ -247,13 +247,21 @@
             width: 220px;
             height: 220px;
             border-radius: 50%;
-            @include bg-orange;
+            @include bg-purple;
+
 
             img {
               height: 80px;
             }
+          } //icon container
+
+          &:nth-child(2n+1) {
+
+            .icon-container{
+              @include bg-orange;
+            }
+            
           }
-          //icon container
 
           h4 {
             padding: 20px 0;
@@ -599,7 +607,7 @@
         transform: translate(-50%, -50%);
         @include bg-purple;
         opacity: .5;
-        cursor: pointer;     
+        cursor: pointer;
 
         img {
           vertical-align: middle;
@@ -855,7 +863,6 @@
   }
 
   .container-footer {
-    // padding: 80px;
 
     .content-footer {
       padding-bottom: 80px;
