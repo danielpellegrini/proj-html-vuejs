@@ -508,8 +508,29 @@
 #app .container-section6 {
   width: 100%;
 }
-#app .container-section6 img {
-  width: 25%;
+#app .container-section6 .overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+#app .container-section6 .overlay img {
+  width: 100%;
+}
+#app .container-section6 .overlay:hover .plus {
+  position: absolute;
+  padding: 40px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #554e9e;
+  color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+#app .container-section6 .overlay:hover .plus img {
+  vertical-align: middle;
 }
 #app .container-section7 {
   padding: 80px;
@@ -751,12 +772,13 @@
   font-weight: 600;
 }
 #app .container-footer .content-footer form {
+  margin-top: 40px;
   width: 100%;
   flex-wrap: wrap;
 }
 #app .container-footer .content-footer form .left-side {
   width: 45%;
-  height: 250px;
+  height: 255px;
   justify-content: space-between;
 }
 #app .container-footer .content-footer form .left-side input {
@@ -764,9 +786,11 @@
   outline-color: #fe6601;
   border: 0.1px solid lightgrey;
   width: 100%;
-  font-size: 0.7em;
+  font-size: 0.6em;
+  opacity: 0.6;
+  font-weight: 600;
   margin-right: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 #app .container-footer .content-footer form .right-side {
   width: 45%;
@@ -776,9 +800,11 @@
   outline-color: #fe6601;
   border: 0.1px solid lightgrey;
   width: 100%;
-  font-size: 0.7em;
+  font-size: 0.6em;
+  opacity: 0.6;
+  font-weight: 600;
   margin-left: 20px;
-  padding: 10px 0 210px 10px;
+  padding: 15px 0 210px 15px;
 }
 #app .container-footer .content-footer form button {
   padding: 20px;
@@ -787,6 +813,6 @@
   outline-width: 0;
   background-color: #fe6601;
   color: #fff;
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 600;
 }
