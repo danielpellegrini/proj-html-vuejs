@@ -549,6 +549,7 @@
 
               p {
                 @include p;
+
               }
             } //card content
 
@@ -811,7 +812,54 @@
 
   }
 
-  
+  .container-footer {
+    // padding: 80px;
+
+    .content-footer {
+      @include container1300;
+
+      h1 {
+        @include h1;
+      }
+
+      h6 {
+        @include h6;
+        padding: 10px 0;
+      }
+
+      .divider {
+        @include divider;
+        margin-bottom: 45px;
+      }
+
+      .cards-container {
+        .card {
+          width: 300px;
+          padding: 30px;
+          text-align: center;
+          line-height: 1em;
+
+          h4 {
+            padding: 20px 0;
+            @include h4;
+          }
+
+          p {
+            @include p;
+            font-size: .6em;
+
+            a {
+              font-weight: 600;
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+
 
 
 }

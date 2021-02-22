@@ -706,3 +706,43 @@
   font-size: 0.8em;
   font-weight: 600;
 }
+#app .container-footer .content-footer {
+  width: 1300px;
+  margin: 0 auto;
+}
+#app .container-footer .content-footer h1 {
+  color: #554e9e;
+  font-size: 2em;
+}
+#app .container-footer .content-footer h6 {
+  opacity: 0.3;
+  font-weight: 700;
+  padding: 10px 0;
+}
+#app .container-footer .content-footer .divider {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+#app .container-footer .content-footer .divider img {
+  height: 15px;
+}
+#app .container-footer .content-footer .cards-container .card {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  line-height: 1em;
+}
+#app .container-footer .content-footer .cards-container .card h4 {
+  padding: 20px 0;
+  font-weight: 500;
+  color: #554e9e;
+}
+#app .container-footer .content-footer .cards-container .card p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+  font-size: 0.6em;
+}
+#app .container-footer .content-footer .cards-container .card p a {
+  font-weight: 600;
+}
