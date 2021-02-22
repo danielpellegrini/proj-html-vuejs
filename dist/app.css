@@ -746,3 +746,10 @@
 #app .container-footer .content-footer .cards-container .card p a {
   font-weight: 600;
 }
+#app .container-footer .content-footer form {
+  width: 100%;
+}
+#app .container-footer .content-footer form input:nth-child(5n-1) {
+  width: 100%;
+  line-height: 10em;
+}
