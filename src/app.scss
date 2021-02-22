@@ -12,21 +12,40 @@
   width: 100%;
   // height: 780px;
 }
-@mixin button-orange {
-  padding: 20px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  @include bg-orange;
-}
-@mixin button-purple {
+@mixin button {
   padding: 15px 25px;
   border: none;
   cursor: pointer;
-  background: none;
-  color: #fff;
-  border: 3px solid #fff;
   outline-width: 0;
+}
+@mixin button-orange {
+  @include button;
+  @include bg-orange;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+
+  &:hover {
+    transition: all 300ms;
+    @include button;
+    @include bg-purple;
+    font-weight: 600;
+  }
+}
+@mixin button-purple {
+  @include button;
+  @include bg-purple;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+  border: 3px solid white;
+
+  &:hover {
+    transition: all 300ms;
+    @include button;
+    @include bg-white;
+    font-weight: 600;
+  }
 }
 @mixin bg-purple {
   background-color: $purple;
@@ -35,6 +54,13 @@
 @mixin bg-orange {
   background-color: $orange;
   color: #fff;
+}
+@mixin bg-white {
+  border: 3px solid white;
+  background-color: white;
+  color: $purple;
+  // padding-right: 20px;
+  font-weight: 600;
 }
 @mixin h1 {
   color: $purple;
@@ -95,10 +121,17 @@
         @include navbarheight;
         align-items: center;
         padding: 0 30px;
+        transition: all 300ms;
       }
 
       div:hover {
-        background-color: #fe6601;
+        @include bg-orange;
+        transition: all 300ms;
+
+        img {
+          filter: brightness(9);
+        }
+
       }
     }
     //end icons container
@@ -145,6 +178,7 @@
         button {
           @include button-orange;
         }
+
       }
       //welcome
 
@@ -178,7 +212,6 @@
   //container-section1
 
   .slider-nav {
-    // @include container1300;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -191,8 +224,7 @@
       border: 3px solid $orange;
       margin-right: 10px;
     }
-  }
-  //end slider bottom section1
+  }// slider nav
 
   .bottom {
     @include bg-purple;
@@ -204,12 +236,12 @@
 
       button {
         @include button-purple;
-        font-weight: 500;
 
         i {
           // vertical-align: middle;
           margin-left: 10px;
         }
+
       }
     }
   }
@@ -260,7 +292,7 @@
             .icon-container{
               @include bg-orange;
             }
-            
+
           }
 
           h4 {
@@ -291,11 +323,10 @@
 
         button:first-of-type {
           @include button-orange;
-          font-weight: 600;
-          padding: 20px 40px;
         }
 
         button:last-of-type {
+          padding: 15px 25px;
           margin-left: 10px;
           outline-width: 0;
           opacity: 0.3;
@@ -303,13 +334,11 @@
           background: none;
           border: none;
           border-bottom: 3px solid lightgrey;
-          padding: 20px 40px;
         }
 
         button:last-of-type:focus {
           @include button-orange;
           opacity: 1;
-          padding: 20px 40px;
         }
 
         h3 {
@@ -319,7 +348,7 @@
 
         .card-container {
           display: flex;
-          // flex-flow: column;
+
           h4 {
             @include h4;
             font-weight: 600;
@@ -476,13 +505,11 @@
           button {
             @include button-orange;
             position: absolute;
-            right: 0;
             bottom: 0;
-            font-weight: 600;
-            padding: 15px 20px;
+            right: 0;
 
             i {
-              vertical-align: middle;
+              margin-left: 10px;
             }
 
           }
@@ -599,6 +626,7 @@
       &:hover {
 
       .plus {
+        transition: all 300ms;
         position: absolute;
         padding: 40px;
         border-radius: 50%;
@@ -789,7 +817,6 @@
       button {
         margin-top: 55px;
         @include button-orange;
-        font-weight: 600;
 
         i {
           padding-left: 15px;
@@ -941,11 +968,11 @@
 
         button {
           @include button-orange;
-          margin-top: 40px;
-          font-weight: 600;
-        }
 
+        }
       }
+
+
 
     } // content footer
 

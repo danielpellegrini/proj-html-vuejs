@@ -94,9 +94,15 @@
   height: 150px;
   align-items: center;
   padding: 0 30px;
+  transition: all 300ms;
 }
 #app .navbar .icons-container div:hover {
-  background-color: #fe6601;
+  background-color: #d2405d;
+  color: #fff;
+  transition: all 300ms;
+}
+#app .navbar .icons-container div:hover img {
+  filter: brightness(9);
 }
 #app .container-section1 {
   background-image: url("../img/section1/slider_slide2_background.png");
@@ -129,17 +135,30 @@
   font-weight: 800;
 }
 #app .container-section1 .content-section1 .welcome h4 {
-  color: #fe6601;
+  color: #d2405d;
   font-family: "Indie Flower", cursive;
   font-weight: normal;
 }
 #app .container-section1 .content-section1 .welcome button {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+#app .container-section1 .content-section1 .welcome button:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
+  color: #fff;
+  font-weight: 600;
 }
 #app .container-section1 .content-section1 .slider-container {
   position: absolute;
@@ -169,8 +188,8 @@
 #app .slider-nav .rectangle {
   width: 50px;
   height: 15px;
-  color: #fe6601;
-  border: 3px solid #fe6601;
+  color: #d2405d;
+  border: 3px solid #d2405d;
   margin-right: 10px;
 }
 #app .bottom {
@@ -187,11 +206,25 @@
   padding: 15px 25px;
   border: none;
   cursor: pointer;
-  background: none;
-  color: #fff;
-  border: 3px solid #fff;
   outline-width: 0;
-  font-weight: 500;
+  background-color: #554e9e;
+  color: #fff;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+  border: 3px solid white;
+}
+#app .bottom .content button:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  border: 3px solid white;
+  background-color: white;
+  color: #554e9e;
+  font-weight: 600;
+  font-weight: 600;
 }
 #app .bottom .content button i {
   margin-left: 10px;
@@ -238,7 +271,7 @@
   height: 80px;
 }
 #app .container-section2 .content-section2 .cards-container .card-content:nth-child(2n+1) .icon-container {
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
 }
 #app .container-section2 .content-section2 .cards-container .card-content h4 {
@@ -263,16 +296,28 @@
   width: 630px;
 }
 #app .container-section3 .content-section3 .left-box button:first-of-type {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
+  color: #fff;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+#app .container-section3 .content-section3 .left-box button:first-of-type:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
   color: #fff;
   font-weight: 600;
-  padding: 20px 40px;
 }
 #app .container-section3 .content-section3 .left-box button:last-of-type {
+  padding: 15px 25px;
   margin-left: 10px;
   outline-width: 0;
   opacity: 0.3;
@@ -280,17 +325,28 @@
   background: none;
   border: none;
   border-bottom: 3px solid lightgrey;
-  padding: 20px 40px;
 }
 #app .container-section3 .content-section3 .left-box button:last-of-type:focus {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
   opacity: 1;
-  padding: 20px 40px;
+}
+#app .container-section3 .content-section3 .left-box button:last-of-type:focus:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
+  color: #fff;
+  font-weight: 600;
 }
 #app .container-section3 .content-section3 .left-box h3 {
   font-weight: 600;
@@ -316,7 +372,7 @@
   height: 50px;
   padding: 40px;
   border-radius: 50%;
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
 }
 #app .container-section3 .content-section3 .left-box .card-container .card-info {
@@ -428,20 +484,31 @@
   height: 220px;
 }
 #app .container-section4 .content-section4 .table .card button {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  margin-top: 40px;
   font-weight: 600;
-  padding: 15px 20px;
+  transition: all 300ms;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#app .container-section4 .content-section4 .table .card button:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
+  color: #fff;
+  font-weight: 600;
 }
 #app .container-section4 .content-section4 .table .card button i {
-  vertical-align: middle;
+  margin-left: 10px;
 }
 #app .container-section5 {
   padding: 80px;
@@ -479,7 +546,7 @@
 #app .container-section5 .content-section5 .left-box ul li i {
   font-size: 1.2em;
   padding-right: 15px;
-  color: #fe6601;
+  color: #d2405d;
 }
 #app .container-section5 .content-section5 .right-box {
   align-self: flex-start;
@@ -522,6 +589,7 @@
   width: 100%;
 }
 #app .container-section6 .overlay:hover .plus {
+  transition: all 300ms;
   position: absolute;
   padding: 40px;
   border-radius: 50%;
@@ -630,7 +698,7 @@
   width: 100%;
 }
 #app .container-section8 .content-section8 .cards-container .card .img-container .number {
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
   position: absolute;
   right: 0;
@@ -674,11 +742,23 @@
 }
 #app .container-section8 .content-section8 button {
   margin-top: 55px;
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
+  color: #fff;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+#app .container-section8 .content-section8 button:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
   color: #fff;
   font-weight: 600;
 }
@@ -787,7 +867,7 @@
 }
 #app .container-footer .content-footer form .left-side input {
   border-radius: 5px;
-  outline-color: #fe6601;
+  outline-color: #d2405d;
   border: 0.1px solid lightgrey;
   width: 100%;
   font-size: 0.6em;
@@ -801,7 +881,7 @@
 }
 #app .container-footer .content-footer form .right-side input {
   border-radius: 5px;
-  outline-color: #fe6601;
+  outline-color: #d2405d;
   border: 0.1px solid lightgrey;
   width: 100%;
   font-size: 0.6em;
@@ -811,12 +891,23 @@
   padding: 15px 0 210px 15px;
 }
 #app .container-footer .content-footer form button {
-  padding: 20px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   outline-width: 0;
-  background-color: #fe6601;
+  background-color: #d2405d;
   color: #fff;
   margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+#app .container-footer .content-footer form button:hover {
+  transition: all 300ms;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  background-color: #554e9e;
+  color: #fff;
   font-weight: 600;
 }

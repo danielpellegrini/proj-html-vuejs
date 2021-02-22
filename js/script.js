@@ -2,14 +2,18 @@ new Vue({
   el: '#app',
   data: {
     sliderSection1: [
-        // './img/section1/slider_slide1_img2.png',
-        // './img/section1/slider_slide1_img1.png',
-        './img/section1/slider_slide2_img1.png',
-        './img/section1/slider_slide2_img2.png',
+
+        // './img/section1/slider_slide3_img1.png',
+        // './img/section1/slider_slide3_img2.png',
+        // './img/section1/slider_slide3_img3.png',
+        './img/section1/slider_slide1_img2.png',
+        './img/section1/slider_slide1_img1.png',
+        // './img/section1/slider_slide2_img1.png',
+        // './img/section1/slider_slide2_img2.png',
     ],
     imagesIndex: 0,
 
-    
+
   },
 
   methods: {
