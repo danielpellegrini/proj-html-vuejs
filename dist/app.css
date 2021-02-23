@@ -132,6 +132,7 @@
   color: #554e9e;
   line-height: 2em;
   text-align: center;
+  z-index: 10;
 }
 #app .container-section1-bg1 .content-section1 .welcome h1:first-of-type {
   font-weight: 800;
