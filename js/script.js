@@ -3,6 +3,9 @@ new Vue({
   data: {
 
     sliderIndex: 0,
+    isHidden1: false,
+    isHidden2: true,
+    isHidden3: true,
 
     sliderSection1: [
       {
@@ -35,44 +38,49 @@ new Vue({
       }
 
     ],
+    imagesList: [
+      '_01-690x506',
+      '_07-690x506',
+      '_08-690x506',
+    ],
+    imagesIndex: 0
 
   },
 
   methods: {
 
+    toggleSecondBg: function () {
+      this.isHidden1 = !this.isHidden1
+      this.isHidden2 = !this.isHidden2
+
+    },
+
+    toggleThirdBg: function () {
+      this.isHidden3 = !this.isHidden3
+      this.isHidden1 = !this.isHidden1
+
+    },
+
     next: function() {
+      if (this.imagesIndex >= this.imagesList.length - 1) {
+        this.imagesIndex = 0;
+      } else {
+        this.imagesIndex += 1;
+      }
 
-
-      // if (this.sliderIndex >= this.sliderSection1.length - 1) {
-      //   this.sliderIndex = 0;
-      // } else {
-      //   this.sliderIndex += 1;
-      // }
-      //
-      // return this.sliderIndex ++
     },
 
     previous: function() {
-      // if (this.sliderIndex < 1) {
-      //   this.sliderIndex = this.sliderSection1.length - 1;
-      // } else {
-      //   this.sliderIndex -= 1;
-      // }
-
-    },
-
-    activeDot: function(index) {
-      if (index !== this.sliderIndex) {
-        return 'rectangle-active'
+      if (this.imagesIndex < 1) {
+        this.imagesIndex = this.imagesList.length - 1;
       } else {
-        return 'rectangle'
+        this.imagesIndex -= 1;
       }
     },
 
     clickedDot: function(index) {
-      this.sliderIndex = index;
-    },
-
+      this.imagesIndex = index;
+    }
 
 
 

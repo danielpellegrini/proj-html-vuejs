@@ -134,6 +134,7 @@
 
       div:hover {
         @include bg-orange;
+        cursor: pointer;
 
         img {
           filter: brightness(9);
@@ -145,23 +146,6 @@
     //end icons container
   }
   //end navbar
-
-  .prev,
-  .next {
-    font-size: 6em;
-    position: absolute;
-    z-index: 1;
-    cursor: pointer;
-    opacity: .1;
-  }
-
-  .prev {
-    left: 5%;
-  }
-
-  .next {
-    right: 5%;
-  }
 
   .container-section1-bg1 {
     background-image: url($bg-section1);
@@ -465,7 +449,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 320px);
-  
+
 
     .rectangle {
       width: 50px;
@@ -628,7 +612,27 @@
       .right-box {
         width: 600px;
 
+
         .slider-container {
+          position: relative;
+
+          .prev {
+            position: absolute;
+            left: 0;
+          }
+
+          .next {
+            position: absolute;
+            right: 0;
+          }
+
+          .prev,
+          .next {
+            @include bg-orange;
+            padding: 15px;
+            cursor: pointer;
+          }
+
           .images {
             img {
               height: 444px;
@@ -638,10 +642,12 @@
 
         .slider-thumbnails {
           width: 33.333%;
+          display: flex;
 
           img {
-            margin: 0 5px;
-            width: calc(100% - 5px);
+            margin: 0 10px;
+            width: calc(100% - 10px);
+            cursor: pointer;
           }
         }
       }

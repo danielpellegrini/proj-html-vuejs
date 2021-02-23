@@ -108,23 +108,10 @@
 #app .navbar .icons-container div:hover {
   background-color: #d2405d;
   color: #fff;
+  cursor: pointer;
 }
 #app .navbar .icons-container div:hover img {
   filter: brightness(9);
-}
-#app .prev,
-#app .next {
-  font-size: 6em;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-  opacity: 0.1;
-}
-#app .prev {
-  left: 5%;
-}
-#app .next {
-  right: 5%;
 }
 #app .container-section1-bg1 {
   background-image: url("../img/section1/slider_slide1_background.png");
@@ -605,15 +592,35 @@
 #app .container-section3 .content-section3 .right-box {
   width: 600px;
 }
+#app .container-section3 .content-section3 .right-box .slider-container {
+  position: relative;
+}
+#app .container-section3 .content-section3 .right-box .slider-container .prev {
+  position: absolute;
+  left: 0;
+}
+#app .container-section3 .content-section3 .right-box .slider-container .next {
+  position: absolute;
+  right: 0;
+}
+#app .container-section3 .content-section3 .right-box .slider-container .prev,
+#app .container-section3 .content-section3 .right-box .slider-container .next {
+  background-color: #d2405d;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
 #app .container-section3 .content-section3 .right-box .slider-container .images img {
   height: 444px;
 }
 #app .container-section3 .content-section3 .right-box .slider-thumbnails {
   width: 33.333%;
+  display: flex;
 }
 #app .container-section3 .content-section3 .right-box .slider-thumbnails img {
-  margin: 0 5px;
-  width: calc(100% - 5px);
+  margin: 0 10px;
+  width: calc(100% - 10px);
+  cursor: pointer;
 }
 #app .container-section4 {
   padding: 80px;

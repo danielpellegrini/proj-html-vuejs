@@ -23,7 +23,7 @@
         <img src="img/nav-icons/logo.png" alt="logo fable">
       </div>
 
-      <!-- IDEA: implement a v-for loop maybe? -->
+
       <div class="icons-container flex-center">
         <div class="flex-column">
           <img src="img/nav-icons/home.png" alt="home">
@@ -63,12 +63,8 @@
 
       <div class="slide-container flex-center">
 
-        <div class="prev" @click="previous">
-          <i class="fas fa-angle-left"></i>
-        </div>
 
-
-        <div class="container-section1-bg1 hide flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider1">
+        <div class="container-section1-bg1  flex-center" :class="{hide: isHidden1}" v-for="(item, index) in sliderSection1[sliderIndex].slider1">
 
           <div class="content-section1 flex-start">
 
@@ -108,7 +104,7 @@
 
         </div>
 
-        <div class="container-section1-bg2  flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider2">
+        <div class="container-section1-bg2 flex-center" :class="{hide: isHidden2}" v-for="(item, index) in sliderSection1[sliderIndex].slider2">
 
           <div class="content-section1 flex-start">
 
@@ -126,7 +122,7 @@
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
-            <div  class="slider-container">
+            <div class="slider-container">
 
               <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider2[0].images">
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
@@ -138,7 +134,10 @@
 
         </div>
 
-        <div class="container-section1-bg3 hide  flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider3">
+        <div class="container-section1-bg3  flex-center" :class="{hide: isHidden3}" v-for="(item, index) in sliderSection1[sliderIndex].slider3">
+
+
+
 
           <div class="content-section1 flex-start">
 
@@ -169,12 +168,12 @@
         </div>
 
 
-        <div class="next" @click="next">
-          <i class="fas fa-angle-right"></i>
-        </div>
+
 
         <div class="slider-nav flex-center">
-          <i v-for="(item, index ) in sliderSection1" :class="activeDot(index)" @click="clickedDot(index)"></i>
+          <i  class="rectangle"></i>
+          <i @click="toggleSecondBg" class="rectangle"></i>
+          <i @click="toggleThirdBg" class="rectangle"></i>
         </div>
       </div>
 
@@ -290,23 +289,32 @@
 
           <div class="slider-container flex-center">
 
-            <div class="prev" @click="previous">
+
+
+            <div class="prev flex-center" @click="previous">
               <i class="fas fa-angle-left"></i>
             </div>
 
+
+
             <div class="images">
-              <img src="img/section3/gallery_08-690x506.jpg">
+              <img class="active first" :src="'img/section3/gallery' + imagesList[imagesIndex] + '.jpg'">
             </div>
 
-            <div class="next" @click="next">
+
+
+            <div class="next flex-center" @click="next">
               <i class="fas fa-angle-right"></i>
             </div>
           </div>
 
-          <div class="slider-thumbnails flex-center">
-            <img src="img/section3/gallery_08-690x506.jpg">
-            <img src="img/section3/gallery_08-690x506.jpg">
-            <img src="img/section3/gallery_08-690x506.jpg">
+
+
+          <div class="flex-center">
+            <div class="slider-thumbnails " v-for="(image, index) in imagesList" :key="image.key">
+              <img @click="clickedDot(index)" :src="'img/section3/gallery' + image + '.jpg'">
+            </div>
+
           </div>
           <div class="border"></div>
 
@@ -582,7 +590,7 @@
         </div>
 
         <div class="slider-section7 flex-center">
-          <i v-for="(item, index ) in sliderSection1" :class="activeDot(index)" @click="clickedDot(index)"></i>
+          <i v-for="(item, index ) in sliderSection1"></i>
         </div>
 
       </div>
