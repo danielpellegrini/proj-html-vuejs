@@ -107,7 +107,7 @@
 #app {
   // width: 100vw;
   // height: 100vh;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 
   .navbar {
     @include container1300;
@@ -146,322 +146,326 @@
   }
   //end navbar
 
-  .row-container {
+  .prev,
+  .next {
+    font-size: 6em;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: .1;
+  }
+
+  .prev {
+    left: 5%;
+  }
+
+  .next {
+    right: 5%;
+  }
+
+  .container-section1-bg1 {
+    background-image: url($bg-section1);
     width: 100%;
-    // top: 150px;
+    @include background-img;
+    padding: 50px 0;
     position: relative;
-    white-space: nowrap;
-    // overflow-x: hidden;
-    display: flex;
-    // width: 1000px;
-    z-index: 0;
 
-    .slide-container {
-      // @include container1300;
-      width: 100%;
+    .content-section1 {
+      @include container1300;
+      height: 650px;
 
-      .prev,
-      .next {
-        font-size: 6em;
+
+
+      .welcome {
+        @include container1300;
+        color: $purple;
+        line-height: 2em;
+        text-align: center;
+
+        h1:first-of-type {
+          font-weight: 800;
+        }
+
+        h4 {
+          color: $orange;
+          font-family: 'Indie Flower', cursive;
+          font-weight: normal;
+        }
+
+        button {
+          @include button-orange;
+        }
+
+      } //welcome
+
+      .slider-container {
+        width: 1500px;
+        // margin: 0 auto;
         position: absolute;
-        z-index: 1;
-        cursor: pointer;
-        opacity: .1;
-      }
+        justify-content: space-between;
+        transform: translate(-5%, 0);
+        display: flex;
 
-      .prev {
-        left: 5%;
-      }
-
-      .next {
-        right: 5%;
-      }
-
-      .container-section1-bg1 {
-        background-image: url($bg-section1);
-        width: 100%;
-        @include background-img;
-        padding: 50px 0;
-        position: relative;
-
-        .content-section1 {
-          @include container1300;
-          // position: relative;
-          // width: 100%;
-          // width: 1600px;
-          // height: 650px;
-
-          .background-icons {
-            position: absolute;
-            top: 0;
-            right: 50%;
-
-            & img {
-              position: relative;
-              top: 0;
-            }
-          }
-
-          .welcome {
-            @include container1300;
-            color: $purple;
-            line-height: 2em;
-            text-align: center;
-
-            h1:first-of-type {
-              font-weight: 800;
-            }
-
-            h4 {
-              color: $orange;
-              font-family: 'Indie Flower', cursive;
-              font-weight: normal;
-            }
-
-            button {
-              @include button-orange;
-            }
-
-          } //friendly
-
-          .welcome {
-            @include container1300;
-            color: $purple;
-            line-height: 2em;
-            text-align: center;
-
-            h1:first-of-type {
-              font-weight: 800;
-            }
-
-            h4 {
-              color: $orange;
-              font-family: 'Indie Flower', cursive;
-              font-weight: normal;
-            }
-
-            button {
-              @include button-orange;
-            }
-
-          }
-
-          .slider-container {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(10%, -50%);
-            display: flex;
-
-            & div:nth-child(2) {
-              //rear image
-              position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-                // height: 80%;
-              }
-            }
-            & div:nth-child(3) {
-              //rear image
-              position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-
-              }
-            }
-
-            & img {
-              //front image
-              // height: 700px;
-            }
-          }
-        } //content-section1
-
-      } //container-section1
-
-      .container-section1-bg2 {
-        background-image: url($bg-section2);
-        @include background-img;
-        padding: 50px;
-        position: relative;
-
-        .content-section1 {
+        .images:first-child {
+          // left image
           position: relative;
-          width: 1600px;
-          height: 650px;
+          left: 0;
+          top: 50px;
 
           .background-icons {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
             position: absolute;
             top: 0;
-            right: 50%;
+            left: 320px;
 
-            & img {
+            & .icon:nth-child(2n+2) {
               position: relative;
-              top: 0;
+              bottom: 100px;
+              right: 320px;
+            }
+
+            .icon:last-child {
+              right: 380px;
             }
           }
 
-          .friendly {
-            @include container1300;
-            color: $purple;
-            line-height: 2em;
+        }
 
-            h1:first-of-type {
-              font-weight: 800;
-            }
-
-            h4 {
-              color: $orange;
-              font-family: 'Indie Flower', cursive;
-              font-weight: normal;
-            }
-
-            button {
-              @include button-orange;
-            }
-
-          }
-
-          .slider-container {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(10%, -50%);
-            display: flex;
-
-            & div:nth-child(2) {
-              //rear image
-              position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-                // height: 80%;
-              }
-            }
-            & div:nth-child(3) {
-              //rear image
-              position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-
-              }
-            }
-
-            & img {
-              //front image
-              // height: 700px;
-            }
-          }
-        } //content-section1
-
-      } //container-section1
-
-      .container-section1-bg3 {
-        background-image: url($bg-section3);
-        @include background-img;
-        padding: 50px;
-        position: relative;
-
-        .content-section1 {
+        .images:nth-child(2) {
+          //right image
           position: relative;
-          width: 1600px;
-          height: 650px;
+          right: 0;
+          top: 0;
 
           .background-icons {
-            position: absolute;
-            top: 0;
-            right: 50%;
-
-            & img {
-              position: relative;
-              top: 0;
-            }
-          }
-
-
-          .learning {
-            @include container1300;
-            color: $purple;
-            line-height: 2em;
-            text-align: left;
-
-            h1:first-of-type {
-              font-weight: 800;
-            }
-
-            h4 {
-              color: $orange;
-              font-family: 'Indie Flower', cursive;
-              font-weight: normal;
-            }
-
-            button {
-              @include button-orange;
-            }
-
-          }
-
-          .slider-container {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(10%, -50%);
+            width: 100%;
+            height: 50%;
             display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 60px;
+            left: 440px;
+            position: absolute;
 
-            & div:nth-child(2) {
-              //rear image
+
+            .icon:nth-child(2n+2) {
               position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-                // height: 80%;
-              }
-            }
-            & div:nth-child(3) {
-              //rear image
-              position: relative;
-              right: 170px;
-              top: 40px;
-              z-index: -1;
-
-              & img {
-
-              }
+              bottom: 60px;
+              right: 340px;
             }
 
-            & img {
-              //front image
-              // height: 700px;
+            .icon:last-child {
+              position: relative;
+              top: -350px;
+              left: -480px;
             }
           }
-        } //content-section1
-
-    }
 
 
+        }
 
-  } // row container
+
+      }
+    } //content-section1
+
+  } //container-section1
+
+  .container-section1-bg2 {
+    background-image: url($bg-section2);
+    @include background-img;
+    padding: 50px 0;
+    position: relative;
+
+    .content-section1 {
+      // @include container1300;
+      position: relative;
+      width: 1600px;
+      height: 650px;
+
+      .background-icons {
+        position: absolute;
+        top: 0;
+        right: 65%;
+        transform: translate(65%, 0);
+
+        & .icon {
+          position: relative;
+          top: 0;
+          margin-right: 40px;
+        }
+
+        .icon:nth-child(2n+2){
+          top: 50px;
+
+        }
+      }
+
+      .friendly {
+        @include container1300;
+        color: $purple;
+        line-height: 2em;
+
+        h1:first-of-type {
+          font-weight: 800;
+        }
+
+        h4 {
+          color: $orange;
+          font-family: 'Indie Flower', cursive;
+          font-weight: normal;
+        }
+
+        button {
+          @include button-orange;
+        }
+
+      }
+
+      .slider-container {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(10%, -50%);
+        display: flex;
+
+        & div:first-child {
+
+          img {
+            width: 550px;
+          }
+
+        }
+
+        & div:nth-child(2) {
+          //rear image 1
+          position: relative;
+          right: 170px;
+          top: 55px;
+          z-index: -1;
+
+          img {
+            width: 500px;
+          }
+
+        }
+
+        & div:nth-child(3) {
+          //rear image 2
+          position: relative;
+          right: 170px;
+          top: 40px;
+          z-index: 0;
+
+
+        }
+
+
+      }
+    } //content-section1
+
+  } //container-section1
+
+  .container-section1-bg3 {
+    background-image: url($bg-section3);
+    @include background-img;
+    padding: 50px 0;
+    position: relative;
+
+    .content-section1 {
+      @include container1300;
+      // position: relative;
+      // width: 1600px;
+      height: 650px;
+
+      .background-icons {
+        position: absolute;
+        top: 0;
+        transform: translate(150px, 0);
+
+        .icon {
+          position: relative;
+          left: 180px;
+          top: 50px;
+          margin-right: 40px;
+        }
+
+        .icon:first-child,
+        .icon:nth-child(2) {
+          top: 120px;
+          left: 350px;
+        }
+
+        .icon:nth-child(3) {
+          left: 80px;
+        }
+
+
+        .icon:last-child {
+          left: 400px;
+        }
+      }
+
+
+      .learning {
+        @include container1300;
+        color: $purple;
+        line-height: 2em;
+        text-align: left;
+
+        h1:first-of-type {
+          font-weight: 800;
+        }
+
+        h4 {
+          color: $orange;
+          font-family: 'Indie Flower', cursive;
+          font-weight: normal;
+        }
+
+        button {
+          @include button-orange;
+        }
+
+      }
+
+      .slider-container {
+        width: 1500px;
+        // margin: 0 auto;
+        position: absolute;
+        justify-content: space-between;
+        transform: translate(40%, 0);
+        display: flex;
+
+        .images:nth-child(2) {
+
+          position: relative;
+          right: 68%;
+          transform: translate(0, 70%);
+        }
+
+        .images:nth-child(3) {
+          position: relative;
+          right: 55%;
+          transform: translate(0, 80%);
+        }
+
+
+      }
+    } //content-section1
+
 
 } //container
 
   .slider-nav {
     position: absolute;
     left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 320px);
+  
 
     .rectangle {
       width: 50px;

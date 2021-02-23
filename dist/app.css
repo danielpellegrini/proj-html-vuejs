@@ -85,6 +85,9 @@
   display: flex;
 }
 
+#app {
+  overflow-x: hidden;
+}
 #app .navbar {
   width: 1300px;
   margin: 0 auto;
@@ -109,31 +112,21 @@
 #app .navbar .icons-container div:hover img {
   filter: brightness(9);
 }
-#app .row-container {
-  width: 100%;
-  position: relative;
-  white-space: nowrap;
-  display: flex;
-  z-index: 0;
-}
-#app .row-container .slide-container {
-  width: 100%;
-}
-#app .row-container .slide-container .prev,
-#app .row-container .slide-container .next {
+#app .prev,
+#app .next {
   font-size: 6em;
   position: absolute;
   z-index: 1;
   cursor: pointer;
   opacity: 0.1;
 }
-#app .row-container .slide-container .prev {
+#app .prev {
   left: 5%;
 }
-#app .row-container .slide-container .next {
+#app .next {
   right: 5%;
 }
-#app .row-container .slide-container .container-section1-bg1 {
+#app .container-section1-bg1 {
   background-image: url("../img/section1/slider_slide1_background.png");
   width: 100%;
   background-size: contain;
@@ -141,35 +134,27 @@
   padding: 50px 0;
   position: relative;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 {
+#app .container-section1-bg1 .content-section1 {
   width: 1300px;
   margin: 0 auto;
+  height: 650px;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .background-icons {
-  position: absolute;
-  top: 0;
-  right: 50%;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .background-icons img {
-  position: relative;
-  top: 0;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome {
+#app .container-section1-bg1 .content-section1 .welcome {
   width: 1300px;
   margin: 0 auto;
   color: #554e9e;
   line-height: 2em;
   text-align: center;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome h1:first-of-type {
+#app .container-section1-bg1 .content-section1 .welcome h1:first-of-type {
   font-weight: 800;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome h4 {
+#app .container-section1-bg1 .content-section1 .welcome h4 {
   color: #d2405d;
   font-family: "Indie Flower", cursive;
   font-weight: normal;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome button {
+#app .container-section1-bg1 .content-section1 .welcome button {
   padding: 15px 25px;
   border: none;
   cursor: pointer;
@@ -180,7 +165,7 @@
   font-weight: 600;
   transition: all 300ms;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome button:hover {
+#app .container-section1-bg1 .content-section1 .welcome button:hover {
   transition: all 300ms;
   padding: 15px 25px;
   border: none;
@@ -190,97 +175,103 @@
   color: #fff;
   font-weight: 600;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome {
-  width: 1300px;
-  margin: 0 auto;
-  color: #554e9e;
-  line-height: 2em;
-  text-align: center;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome h1:first-of-type {
-  font-weight: 800;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome h4 {
-  color: #d2405d;
-  font-family: "Indie Flower", cursive;
-  font-weight: normal;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome button {
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #d2405d;
-  color: #fff;
-  margin-top: 40px;
-  font-weight: 600;
-  transition: all 300ms;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .welcome button:hover {
-  transition: all 300ms;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #554e9e;
-  color: #fff;
-  font-weight: 600;
-}
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .slider-container {
+#app .container-section1-bg1 .content-section1 .slider-container {
+  width: 1500px;
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(10%, -50%);
+  justify-content: space-between;
+  transform: translate(-5%, 0);
   display: flex;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .slider-container div:nth-child(2) {
+#app .container-section1-bg1 .content-section1 .slider-container .images:first-child {
   position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: -1;
+  left: 0;
+  top: 50px;
 }
-#app .row-container .slide-container .container-section1-bg1 .content-section1 .slider-container div:nth-child(3) {
+#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 320px;
+}
+#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons .icon:nth-child(2n+2) {
   position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: -1;
+  bottom: 100px;
+  right: 320px;
 }
-#app .row-container .slide-container .container-section1-bg2 {
+#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons .icon:last-child {
+  right: 380px;
+}
+#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 60px;
+  left: 440px;
+  position: absolute;
+}
+#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons .icon:nth-child(2n+2) {
+  position: relative;
+  bottom: 60px;
+  right: 340px;
+}
+#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons .icon:last-child {
+  position: relative;
+  top: -350px;
+  left: -480px;
+}
+#app .container-section1-bg2 {
   background-image: url("../img/section1/slider_slide2_background.png");
   background-size: contain;
   width: 100%;
-  padding: 50px;
+  padding: 50px 0;
   position: relative;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 {
+#app .container-section1-bg2 .content-section1 {
   position: relative;
   width: 1600px;
   height: 650px;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .background-icons {
+#app .container-section1-bg2 .content-section1 .background-icons {
   position: absolute;
   top: 0;
-  right: 50%;
+  right: 65%;
+  transform: translate(65%, 0);
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .background-icons img {
+#app .container-section1-bg2 .content-section1 .background-icons .icon {
   position: relative;
   top: 0;
+  margin-right: 40px;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .friendly {
+#app .container-section1-bg2 .content-section1 .background-icons .icon:nth-child(2n+2) {
+  top: 50px;
+}
+#app .container-section1-bg2 .content-section1 .friendly {
   width: 1300px;
   margin: 0 auto;
   color: #554e9e;
   line-height: 2em;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .friendly h1:first-of-type {
+#app .container-section1-bg2 .content-section1 .friendly h1:first-of-type {
   font-weight: 800;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .friendly h4 {
+#app .container-section1-bg2 .content-section1 .friendly h4 {
   color: #d2405d;
   font-family: "Indie Flower", cursive;
   font-weight: normal;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .friendly button {
+#app .container-section1-bg2 .content-section1 .friendly button {
   padding: 15px 25px;
   border: none;
   cursor: pointer;
@@ -291,7 +282,7 @@
   font-weight: 600;
   transition: all 300ms;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .friendly button:hover {
+#app .container-section1-bg2 .content-section1 .friendly button:hover {
   transition: all 300ms;
   padding: 15px 25px;
   border: none;
@@ -301,62 +292,81 @@
   color: #fff;
   font-weight: 600;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .slider-container {
+#app .container-section1-bg2 .content-section1 .slider-container {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(10%, -50%);
   display: flex;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .slider-container div:nth-child(2) {
+#app .container-section1-bg2 .content-section1 .slider-container div:first-child img {
+  width: 550px;
+}
+#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(2) {
+  position: relative;
+  right: 170px;
+  top: 55px;
+  z-index: -1;
+}
+#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(2) img {
+  width: 500px;
+}
+#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(3) {
   position: relative;
   right: 170px;
   top: 40px;
-  z-index: -1;
+  z-index: 0;
 }
-#app .row-container .slide-container .container-section1-bg2 .content-section1 .slider-container div:nth-child(3) {
-  position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: -1;
-}
-#app .row-container .slide-container .container-section1-bg3 {
+#app .container-section1-bg3 {
   background-image: url("../img/section1/slider_slide3_background.png");
   background-size: contain;
   width: 100%;
-  padding: 50px;
+  padding: 50px 0;
   position: relative;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 {
-  position: relative;
-  width: 1600px;
+#app .container-section1-bg3 .content-section1 {
+  width: 1300px;
+  margin: 0 auto;
   height: 650px;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .background-icons {
+#app .container-section1-bg3 .content-section1 .background-icons {
   position: absolute;
   top: 0;
-  right: 50%;
+  transform: translate(150px, 0);
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .background-icons img {
+#app .container-section1-bg3 .content-section1 .background-icons .icon {
   position: relative;
-  top: 0;
+  left: 180px;
+  top: 50px;
+  margin-right: 40px;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .learning {
+#app .container-section1-bg3 .content-section1 .background-icons .icon:first-child,
+#app .container-section1-bg3 .content-section1 .background-icons .icon:nth-child(2) {
+  top: 120px;
+  left: 350px;
+}
+#app .container-section1-bg3 .content-section1 .background-icons .icon:nth-child(3) {
+  left: 80px;
+}
+#app .container-section1-bg3 .content-section1 .background-icons .icon:last-child {
+  left: 400px;
+}
+#app .container-section1-bg3 .content-section1 .learning {
   width: 1300px;
   margin: 0 auto;
   color: #554e9e;
   line-height: 2em;
   text-align: left;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .learning h1:first-of-type {
+#app .container-section1-bg3 .content-section1 .learning h1:first-of-type {
   font-weight: 800;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .learning h4 {
+#app .container-section1-bg3 .content-section1 .learning h4 {
   color: #d2405d;
   font-family: "Indie Flower", cursive;
   font-weight: normal;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .learning button {
+#app .container-section1-bg3 .content-section1 .learning button {
   padding: 15px 25px;
   border: none;
   cursor: pointer;
@@ -367,7 +377,7 @@
   font-weight: 600;
   transition: all 300ms;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .learning button:hover {
+#app .container-section1-bg3 .content-section1 .learning button:hover {
   transition: all 300ms;
   padding: 15px 25px;
   border: none;
@@ -377,30 +387,27 @@
   color: #fff;
   font-weight: 600;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .slider-container {
+#app .container-section1-bg3 .content-section1 .slider-container {
+  width: 1500px;
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(10%, -50%);
+  justify-content: space-between;
+  transform: translate(40%, 0);
   display: flex;
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .slider-container div:nth-child(2) {
+#app .container-section1-bg3 .content-section1 .slider-container .images:nth-child(2) {
   position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: -1;
+  right: 68%;
+  transform: translate(0, 70%);
 }
-#app .row-container .slide-container .container-section1-bg3 .content-section1 .slider-container div:nth-child(3) {
+#app .container-section1-bg3 .content-section1 .slider-container .images:nth-child(3) {
   position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: -1;
+  right: 55%;
+  transform: translate(0, 80%);
 }
 #app .slider-nav {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 320px);
 }
 #app .slider-nav .rectangle {
   width: 50px;

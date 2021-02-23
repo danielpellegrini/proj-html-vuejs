@@ -61,23 +61,17 @@
     <section class="row-container">
 
 
-      <div class="slide-container flex-center" >
+      <div class="slide-container flex-center">
 
         <div class="prev" @click="previous">
           <i class="fas fa-angle-left"></i>
         </div>
 
 
-        <div class="container-section1-bg1 flex-center"
-             v-for="(item, index) in sliderSection1[sliderIndex].slider1">
+        <div class="container-section1-bg1 hide flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider1">
 
           <div class="content-section1 flex-start">
 
-            <div class="background-icons flex-center">
-              <div v-for="(icon, index) in sliderSection1[sliderIndex].slider1.icons">
-                <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
-              </div>
-            </div>
 
             <div class="welcome font-xl">
               <h4>{{item.topText}}</h4>
@@ -87,16 +81,24 @@
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
-            <div v-for="(image, index) in sliderSection1" class="slider-container">
+            <div class="slider-container">
 
-              <div class="images">
-                <img :src="sliderSection1[0]">
+              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider1[0].imageA">
+                <div class="background-icons flex-center">
+                  <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider1[0].iconsA">
+                    <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
+                  </div>
+                </div>
+                <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
-              <div class="images">
-                <img :src="sliderSection1[1]">
-              </div>
-              <div class="images">
-                <img :src="sliderSection1[2]">
+
+              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider1[0].imageB">
+                <div class="background-icons flex-center">
+                  <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider1[0].iconsB">
+                    <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
+                  </div>
+                </div>
+                <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
             </div>
@@ -106,13 +108,12 @@
 
         </div>
 
-        <!-- <div class="container-section1-bg2  flex-center"
-             v-for="(item, index) in sliderSection1[sliderIndex].slider2">
+        <div class="container-section1-bg2  flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider2">
 
           <div class="content-section1 flex-start">
 
             <div class="background-icons flex-center">
-              <div v-for="(icon, index) in sliderSection1[sliderIndex].slider2.icons">
+              <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider2[0].icons">
                 <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
               </div>
             </div>
@@ -125,32 +126,24 @@
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
-            <div v-for="(image, index) in sliderSection1" class="slider-container">
+            <div  class="slider-container">
 
-              <div class="images">
-                <img :src="sliderSection1[0]">
-              </div>
-              <div class="images">
-                <img :src="sliderSection1[1]">
-              </div>
-              <div class="images">
-                <img :src="sliderSection1[2]">
+              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider2[0].images">
+                <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
             </div>
 
           </div>
 
-
         </div>
 
-        <div class="container-section1-bg3  flex-center"
-             v-for="(item, index) in sliderSection1[sliderIndex].slider3">
+        <div class="container-section1-bg3 hide  flex-center" v-for="(item, index) in sliderSection1[sliderIndex].slider3">
 
           <div class="content-section1 flex-start">
 
             <div class="background-icons flex-center">
-              <div v-for="(icon, index) in sliderSection1[sliderIndex].slider3.icons">
+              <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider3[0].icons">
                 <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
               </div>
             </div>
@@ -163,23 +156,17 @@
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
-            <div v-for="(image, index) in sliderSection1" class="slider-container">
+            <div class="slider-container">
 
-              <div class="images">
-                <img :src="sliderSection1[0]">
-              </div>
-              <div class="images">
-                <img :src="sliderSection1[1]">
-              </div>
-              <div class="images">
-                <img :src="sliderSection1[2]">
+              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider3[0].images">
+                <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
             </div>
 
           </div>
 
-        </div> -->
+        </div>
 
 
         <div class="next" @click="next">
