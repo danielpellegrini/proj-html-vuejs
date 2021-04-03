@@ -88,321 +88,140 @@
 #app {
   overflow-x: hidden;
 }
-#app .navbar {
-  width: 1300px;
-  margin: 0 auto;
+#app #mainNavbar {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+#app #mainNavbar .logo img {
   height: 150px;
 }
-#app .navbar .logo img {
-  height: 150px;
-}
-#app .navbar .icons-container div {
+#app #mainNavbar .icons-container div {
   height: 150px;
   align-items: center;
   padding: 0 30px;
   transition: all 300ms;
 }
-#app .navbar .icons-container div span {
+#app #mainNavbar .icons-container div span {
   margin-top: 15px;
 }
-#app .navbar .icons-container div:hover {
+#app #mainNavbar .icons-container div:hover {
   background-color: #d2405d;
   color: #fff;
   cursor: pointer;
 }
-#app .navbar .icons-container div:hover img {
+#app #mainNavbar .icons-container div:hover img {
   filter: brightness(9);
 }
-#app .container-section1-bg1 {
-  background-image: url("../img/section1/slider_slide1_background.png");
-  width: 100%;
-  background-size: contain;
-  width: 100%;
-  padding: 50px 0;
-  position: relative;
+#app .collapse {
+  -webkit-animation: collapse 0.5s ease forwards;
+          animation: collapse 0.5s ease forwards;
 }
-#app .container-section1-bg1 .content-section1 {
-  width: 1300px;
-  margin: 0 auto;
-  height: 650px;
+@-webkit-keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: -150px;
+  }
 }
-#app .container-section1-bg1 .content-section1 .welcome {
-  width: 1300px;
-  margin: 0 auto;
-  color: #554e9e;
-  line-height: 2em;
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: -150px;
+  }
+}
+#app .open {
+  -webkit-animation: open 0.5s ease forwards;
+          animation: open 0.5s ease forwards;
+}
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+    top: -150px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes open {
+  from {
+    opacity: 0;
+    top: -150px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+#app .wrap {
+  overflow-x: hidden;
   text-align: center;
-  z-index: 10;
 }
-#app .container-section1-bg1 .content-section1 .welcome h1:first-of-type {
-  font-weight: 800;
-}
-#app .container-section1-bg1 .content-section1 .welcome h4 {
-  color: #d2405d;
-  font-family: "Indie Flower", cursive;
-  font-weight: normal;
-}
-#app .container-section1-bg1 .content-section1 .welcome button {
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #d2405d;
-  color: #fff;
-  margin-top: 40px;
-  font-weight: 600;
-  transition: all 300ms;
-}
-#app .container-section1-bg1 .content-section1 .welcome button:hover {
-  transition: all 300ms;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #554e9e;
-  color: #fff;
-  font-weight: 600;
-}
-#app .container-section1-bg1 .content-section1 .slider-container {
-  width: 1500px;
+#app .btn {
   position: absolute;
-  justify-content: space-between;
-  transform: translate(-5%, 0);
-  display: flex;
+  width: 50vw;
+  height: 100vh;
+  z-index: 1;
+  font-size: 48pt;
+  line-height: 100vh;
+  overflow: hidden;
 }
-#app .container-section1-bg1 .content-section1 .slider-container .images:first-child {
-  position: relative;
+#app .btn:nth-child(1) {
   left: 0;
-  top: 50px;
 }
-#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  position: absolute;
-  top: 0;
-  left: 320px;
-}
-#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons .icon:nth-child(2n+2) {
-  position: relative;
-  bottom: 100px;
-  right: 320px;
-}
-#app .container-section1-bg1 .content-section1 .slider-container .images:first-child .background-icons .icon:last-child {
-  right: 380px;
-}
-#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) {
-  position: relative;
+#app .btn:nth-child(2) {
   right: 0;
-  top: 0;
 }
-#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons {
+#app main {
+  width: calc(var(--article-count) * 100vw);
+  font-size: 0;
+  transition: 0.5s ease;
+  transform: translateX(calc((-1) * var(--article-index) * 100vw));
+  -webkit-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+  -moz-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+  -ms-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+  -o-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+}
+#app article {
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  line-height: 100vh;
+  font-size: 48pt;
+}
+#app .index {
+  position: absolute;
+  height: 4em;
   width: 100%;
-  height: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  position: absolute;
-  top: 60px;
-  left: 440px;
-  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
-#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons .icon:nth-child(2n+2) {
-  position: relative;
-  bottom: 60px;
-  right: 340px;
+#app a {
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
 }
-#app .container-section1-bg1 .content-section1 .slider-container .images:nth-child(2) .background-icons .icon:last-child {
-  position: relative;
-  top: -350px;
-  left: -480px;
-}
-#app .container-section1-bg2 {
-  background-image: url("../img/section1/slider_slide2_background.png");
-  background-size: contain;
-  width: 100%;
-  padding: 50px 0;
-  position: relative;
-}
-#app .container-section1-bg2 .content-section1 {
-  position: relative;
-  width: 1600px;
-  height: 650px;
-}
-#app .container-section1-bg2 .content-section1 .background-icons {
-  position: absolute;
-  top: 0;
-  right: 65%;
-  transform: translate(65%, 0);
-}
-#app .container-section1-bg2 .content-section1 .background-icons .icon {
-  position: relative;
-  top: 0;
-  margin-right: 40px;
-}
-#app .container-section1-bg2 .content-section1 .background-icons .icon:nth-child(2n+2) {
-  top: 50px;
-}
-#app .container-section1-bg2 .content-section1 .friendly {
-  width: 1300px;
-  margin: 0 auto;
-  color: #554e9e;
-  line-height: 2em;
-}
-#app .container-section1-bg2 .content-section1 .friendly h1:first-of-type {
-  font-weight: 800;
-}
-#app .container-section1-bg2 .content-section1 .friendly h4 {
-  color: #d2405d;
-  font-family: "Indie Flower", cursive;
-  font-weight: normal;
-}
-#app .container-section1-bg2 .content-section1 .friendly button {
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #d2405d;
-  color: #fff;
-  margin-top: 40px;
-  font-weight: 600;
-  transition: all 300ms;
-}
-#app .container-section1-bg2 .content-section1 .friendly button:hover {
-  transition: all 300ms;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #554e9e;
-  color: #fff;
-  font-weight: 600;
-}
-#app .container-section1-bg2 .content-section1 .slider-container {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(10%, -50%);
-  display: flex;
-}
-#app .container-section1-bg2 .content-section1 .slider-container div:first-child img {
-  width: 550px;
-}
-#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(2) {
-  position: relative;
-  right: 170px;
-  top: 55px;
-  z-index: -1;
-}
-#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(2) img {
-  width: 500px;
-}
-#app .container-section1-bg2 .content-section1 .slider-container div:nth-child(3) {
-  position: relative;
-  right: 170px;
-  top: 40px;
-  z-index: 0;
-}
-#app .container-section1-bg3 {
-  background-image: url("../img/section1/slider_slide3_background.png");
-  background-size: contain;
-  width: 100%;
-  padding: 50px 0;
-  position: relative;
-}
-#app .container-section1-bg3 .content-section1 {
-  width: 1300px;
-  margin: 0 auto;
-  height: 650px;
-}
-#app .container-section1-bg3 .content-section1 .background-icons {
-  position: absolute;
-  top: 0;
-  transform: translate(150px, 0);
-}
-#app .container-section1-bg3 .content-section1 .background-icons .icon {
-  position: relative;
-  left: 180px;
-  top: 50px;
-  margin-right: 40px;
-}
-#app .container-section1-bg3 .content-section1 .background-icons .icon:first-child,
-#app .container-section1-bg3 .content-section1 .background-icons .icon:nth-child(2) {
-  top: 120px;
-  left: 350px;
-}
-#app .container-section1-bg3 .content-section1 .background-icons .icon:nth-child(3) {
-  left: 80px;
-}
-#app .container-section1-bg3 .content-section1 .background-icons .icon:last-child {
-  left: 400px;
-}
-#app .container-section1-bg3 .content-section1 .learning {
-  width: 1300px;
-  margin: 0 auto;
-  color: #554e9e;
-  line-height: 2em;
-  text-align: left;
-}
-#app .container-section1-bg3 .content-section1 .learning h1:first-of-type {
-  font-weight: 800;
-}
-#app .container-section1-bg3 .content-section1 .learning h4 {
-  color: #d2405d;
-  font-family: "Indie Flower", cursive;
-  font-weight: normal;
-}
-#app .container-section1-bg3 .content-section1 .learning button {
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #d2405d;
-  color: #fff;
-  margin-top: 40px;
-  font-weight: 600;
-  transition: all 300ms;
-}
-#app .container-section1-bg3 .content-section1 .learning button:hover {
-  transition: all 300ms;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  outline-width: 0;
-  background-color: #554e9e;
-  color: #fff;
-  font-weight: 600;
-}
-#app .container-section1-bg3 .content-section1 .slider-container {
-  width: 1500px;
-  position: absolute;
-  justify-content: space-between;
-  transform: translate(40%, 0);
-  display: flex;
-}
-#app .container-section1-bg3 .content-section1 .slider-container .images:nth-child(2) {
-  position: relative;
-  right: 68%;
-  transform: translate(0, 70%);
-}
-#app .container-section1-bg3 .content-section1 .slider-container .images:nth-child(3) {
-  position: relative;
-  right: 55%;
-  transform: translate(0, 80%);
-}
-#app .slider-nav {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 320px);
-}
-#app .slider-nav .rectangle {
-  width: 50px;
-  height: 15px;
-  color: #d2405d;
-  border: 3px solid #d2405d;
-  margin-right: 10px;
+@media screen and (min-width: 901px) {
+  #app .btn:hover {
+    background-color: white;
+    opacity: 0.2;
+  }
+  #app a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 #app .bottom {
   background-color: #554e9e;

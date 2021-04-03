@@ -109,12 +109,14 @@
   // height: 100vh;
   overflow-x: hidden;
 
-  .navbar {
-    @include container1300;
+  #mainNavbar {
     @include navbarheight;
-    // position: fixed;
-    // top: 0;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    
     .logo img {
 
       @include navbarheight;
@@ -147,319 +149,438 @@
   }
   //end navbar
 
-  .container-section1-bg1 {
-    background-image: url($bg-section1);
-    width: 100%;
-    @include background-img;
-    padding: 50px 0;
-    position: relative;
-
-    .content-section1 {
-      @include container1300;
-      height: 650px;
-
-
-
-      .welcome {
-        @include container1300;
-        color: $purple;
-        line-height: 2em;
-        text-align: center;
-        z-index: 10;
-
-        h1:first-of-type {
-          font-weight: 800;
-        }
-
-        h4 {
-          color: $orange;
-          font-family: 'Indie Flower', cursive;
-          font-weight: normal;
-        }
-
-        button {
-          @include button-orange;
-        }
-
-      } //welcome
-
-      .slider-container {
-        width: 1500px;
-        // margin: 0 auto;
-        position: absolute;
-        justify-content: space-between;
-        transform: translate(-5%, 0);
-        display: flex;
-
-        .images:first-child {
-          // left image
-          position: relative;
-          left: 0;
-          top: 50px;
-
-          .background-icons {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-            position: absolute;
-            top: 0;
-            left: 320px;
-
-            & .icon:nth-child(2n+2) {
-              position: relative;
-              bottom: 100px;
-              right: 320px;
-            }
-
-            .icon:last-child {
-              right: 380px;
-            }
-          }
-
-        }
-
-        .images:nth-child(2) {
-          //right image
-          position: relative;
-          right: 0;
-          top: 0;
-
-          .background-icons {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-            position: absolute;
-            top: 60px;
-            left: 440px;
-            position: absolute;
-
-
-            .icon:nth-child(2n+2) {
-              position: relative;
-              bottom: 60px;
-              right: 340px;
-            }
-
-            .icon:last-child {
-              position: relative;
-              top: -350px;
-              left: -480px;
-            }
-          }
-
-
-        }
-
-
-      }
-    } //content-section1
-
-  } //container-section1
-
-  .container-section1-bg2 {
-    background-image: url($bg-section2);
-    @include background-img;
-    padding: 50px 0;
-    position: relative;
-
-    .content-section1 {
-      // @include container1300;
-      position: relative;
-      width: 1600px;
-      height: 650px;
-
-      .background-icons {
-        position: absolute;
-        top: 0;
-        right: 65%;
-        transform: translate(65%, 0);
-
-        & .icon {
-          position: relative;
-          top: 0;
-          margin-right: 40px;
-        }
-
-        .icon:nth-child(2n+2){
-          top: 50px;
-
-        }
-      }
-
-      .friendly {
-        @include container1300;
-        color: $purple;
-        line-height: 2em;
-
-        h1:first-of-type {
-          font-weight: 800;
-        }
-
-        h4 {
-          color: $orange;
-          font-family: 'Indie Flower', cursive;
-          font-weight: normal;
-        }
-
-        button {
-          @include button-orange;
-        }
-
-      }
-
-      .slider-container {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(10%, -50%);
-        display: flex;
-
-        & div:first-child {
-
-          img {
-            width: 550px;
-          }
-
-        }
-
-        & div:nth-child(2) {
-          //rear image 1
-          position: relative;
-          right: 170px;
-          top: 55px;
-          z-index: -1;
-
-          img {
-            width: 500px;
-          }
-
-        }
-
-        & div:nth-child(3) {
-          //rear image 2
-          position: relative;
-          right: 170px;
-          top: 40px;
-          z-index: 0;
-
-
-        }
-
-
-      }
-    } //content-section1
-
-  } //container-section1
-
-  .container-section1-bg3 {
-    background-image: url($bg-section3);
-    @include background-img;
-    padding: 50px 0;
-    position: relative;
-
-    .content-section1 {
-      @include container1300;
-      // position: relative;
-      // width: 1600px;
-      height: 650px;
-
-      .background-icons {
-        position: absolute;
-        top: 0;
-        transform: translate(150px, 0);
-
-        .icon {
-          position: relative;
-          left: 180px;
-          top: 50px;
-          margin-right: 40px;
-        }
-
-        .icon:first-child,
-        .icon:nth-child(2) {
-          top: 120px;
-          left: 350px;
-        }
-
-        .icon:nth-child(3) {
-          left: 80px;
-        }
-
-
-        .icon:last-child {
-          left: 400px;
-        }
-      }
-
-
-      .learning {
-        @include container1300;
-        color: $purple;
-        line-height: 2em;
-        text-align: left;
-
-        h1:first-of-type {
-          font-weight: 800;
-        }
-
-        h4 {
-          color: $orange;
-          font-family: 'Indie Flower', cursive;
-          font-weight: normal;
-        }
-
-        button {
-          @include button-orange;
-        }
-
-      }
-
-      .slider-container {
-        width: 1500px;
-        // margin: 0 auto;
-        position: absolute;
-        justify-content: space-between;
-        transform: translate(40%, 0);
-        display: flex;
-
-        .images:nth-child(2) {
-
-          position: relative;
-          right: 68%;
-          transform: translate(0, 70%);
-        }
-
-        .images:nth-child(3) {
-          position: relative;
-          right: 55%;
-          transform: translate(0, 80%);
-        }
-
-
-      }
-    } //content-section1
-
-
-} //container
-
-  .slider-nav {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 320px);
-
-
-    .rectangle {
-      width: 50px;
-      height: 15px;
-      color: $orange;
-      border: 3px solid $orange;
-      margin-right: 10px;
+  // NAVBAR scroll effect -----------------------------------------
+
+  // Collapse nav bar on scroll down
+  .collapse {
+    animation: collapse .5s ease forwards;
+  }
+
+  @keyframes collapse {
+    from {
+      opacity: 1;
+      top: 0;
     }
-  }// slider nav
+
+    to {
+      opacity: 0;
+      top: -150px;
+    }
+  }
+
+  // Open nav bar on scroll up
+  .open {
+    animation: open .5s ease forwards;
+  }
+
+  @keyframes open {
+    from {
+      opacity: 0;
+      top: -150px;
+    }
+
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  // end NAVBAR scroll effect -----------------------------------------
+
+  // ================================= TEST SMOOTH SLIDER =================================
+
+
+    .wrap {
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    .btn {
+      position: absolute;
+      width: 50vw;
+      height: 100vh;
+      z-index: 1;
+      font-size: 48pt;
+      line-height: 100vh;
+      overflow: hidden;
+    }
+
+    .btn:nth-child(1) {
+      left: 0;
+    }
+
+    .btn:nth-child(2) {
+      right: 0;
+    }
+
+    main {
+      width: calc(var(--article-count) * 100vw);
+      font-size: 0;
+      transition: 0.5s ease;
+      transform: translateX(calc((-1) * var(--article-index) * 100vw));
+      -webkit-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+      -moz-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+      -ms-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+      -o-transform: translateX(calc((-1) * var(--article-index) * 100vw));
+    }
+
+    article {
+      width: 100vw;
+      height: 100vh;
+      display: inline-block;
+      line-height: 100vh;
+      font-size: 48pt;
+    }
+
+    .index {
+      position: absolute;
+      height: 4em;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    a {
+      width: 4em;
+      height: 4em;
+      line-height: 4em;
+    }
+
+    @media screen and (min-width: 901px) {
+      .btn:hover {
+        background-color: white;
+        opacity: 0.2;
+      }
+
+      a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+
+    // ================================= END TEST SMOOTH SLIDER =================================
+      
+
+  
+
+  //  ================================= OLD BACKGROUND SLIDER =================================
+
+  // .container-section1-bg1 {
+  //   background-image: url($bg-section1);
+  //   width: 100%;
+  //   @include background-img;
+  //   padding: 50px 0;
+  //   position: relative;
+
+  //   .content-section1 {
+  //     @include container1300;
+  //     height: 650px;
+
+  //     .welcome {
+  //       @include container1300;
+  //       color: $purple;
+  //       line-height: 2em;
+  //       text-align: center;
+  //       z-index: 10;
+
+  //       h1:first-of-type {
+  //         font-weight: 800;
+  //       }
+
+  //       h4 {
+  //         color: $orange;
+  //         font-family: 'Indie Flower', cursive;
+  //         font-weight: normal;
+  //       }
+
+  //       button {
+  //         @include button-orange;
+  //       }
+
+  //     } //welcome
+
+  //     .slider-container {
+  //       width: 1500px;
+  //       // margin: 0 auto;
+  //       position: absolute;
+  //       justify-content: space-between;
+  //       transform: translate(-5%, 0);
+  //       display: flex;
+
+  //       .images:first-child {
+  //         // left image
+  //         position: relative;
+  //         left: 0;
+  //         top: 50px;
+
+  //         .background-icons {
+  //           width: 100%;
+  //           height: 50%;
+  //           display: flex;
+  //           flex-flow: column;
+  //           align-items: flex-start;
+  //           position: absolute;
+  //           top: 0;
+  //           left: 320px;
+
+  //           & .icon:nth-child(2n+2) {
+  //             position: relative;
+  //             bottom: 100px;
+  //             right: 320px;
+  //           }
+
+  //           .icon:last-child {
+  //             right: 380px;
+  //           }
+  //         }
+
+  //       }
+
+  //       .images:nth-child(2) {
+  //         //right image
+  //         position: relative;
+  //         right: 0;
+  //         top: 0;
+
+  //         .background-icons {
+  //           width: 100%;
+  //           height: 50%;
+  //           display: flex;
+  //           flex-flow: column;
+  //           align-items: flex-start;
+  //           position: absolute;
+  //           top: 60px;
+  //           left: 440px;
+  //           position: absolute;
+
+
+  //           .icon:nth-child(2n+2) {
+  //             position: relative;
+  //             bottom: 60px;
+  //             right: 340px;
+  //           }
+
+  //           .icon:last-child {
+  //             position: relative;
+  //             top: -350px;
+  //             left: -480px;
+  //           }
+  //         }
+
+
+  //       }
+
+
+  //     }
+  //   } //content-section1
+
+  // } //container-section1
+
+  // .container-section1-bg2 {
+  //   background-image: url($bg-section2);
+  //   @include background-img;
+  //   padding: 50px 0;
+  //   position: relative;
+
+  //   .content-section1 {
+  //     // @include container1300;
+  //     position: relative;
+  //     width: 1600px;
+  //     height: 650px;
+
+  //     .background-icons {
+  //       position: absolute;
+  //       top: 0;
+  //       right: 65%;
+  //       transform: translate(65%, 0);
+
+  //       & .icon {
+  //         position: relative;
+  //         top: 0;
+  //         margin-right: 40px;
+  //       }
+
+  //       .icon:nth-child(2n+2){
+  //         top: 50px;
+
+  //       }
+  //     }
+
+  //     .friendly {
+  //       @include container1300;
+  //       color: $purple;
+  //       line-height: 2em;
+
+  //       h1:first-of-type {
+  //         font-weight: 800;
+  //       }
+
+  //       h4 {
+  //         color: $orange;
+  //         font-family: 'Indie Flower', cursive;
+  //         font-weight: normal;
+  //       }
+
+  //       button {
+  //         @include button-orange;
+  //       }
+
+  //     }
+
+  //     .slider-container {
+  //       position: absolute;
+  //       right: 0;
+  //       top: 50%;
+  //       transform: translate(10%, -50%);
+  //       display: flex;
+
+  //       & div:first-child {
+
+  //         img {
+  //           width: 550px;
+  //         }
+
+  //       }
+
+  //       & div:nth-child(2) {
+  //         //rear image 1
+  //         position: relative;
+  //         right: 170px;
+  //         top: 55px;
+  //         z-index: -1;
+
+  //         img {
+  //           width: 500px;
+  //         }
+
+  //       }
+
+  //       & div:nth-child(3) {
+  //         //rear image 2
+  //         position: relative;
+  //         right: 170px;
+  //         top: 40px;
+  //         z-index: 0;
+
+
+  //       }
+
+
+  //     }
+  //   } //content-section1
+
+  // } //container-section1
+
+  // .container-section1-bg3 {
+  //   background-image: url($bg-section3);
+  //   @include background-img;
+  //   padding: 50px 0;
+  //   position: relative;
+
+  //   .content-section1 {
+  //     @include container1300;
+  //     // position: relative;
+  //     // width: 1600px;
+  //     height: 650px;
+
+  //     .background-icons {
+  //       position: absolute;
+  //       top: 0;
+  //       transform: translate(150px, 0);
+
+  //       .icon {
+  //         position: relative;
+  //         left: 180px;
+  //         top: 50px;
+  //         margin-right: 40px;
+  //       }
+
+  //       .icon:first-child,
+  //       .icon:nth-child(2) {
+  //         top: 120px;
+  //         left: 350px;
+  //       }
+
+  //       .icon:nth-child(3) {
+  //         left: 80px;
+  //       }
+
+
+  //       .icon:last-child {
+  //         left: 400px;
+  //       }
+  //     }
+
+
+  //     .learning {
+  //       @include container1300;
+  //       color: $purple;
+  //       line-height: 2em;
+  //       text-align: left;
+
+  //       h1:first-of-type {
+  //         font-weight: 800;
+  //       }
+
+  //       h4 {
+  //         color: $orange;
+  //         font-family: 'Indie Flower', cursive;
+  //         font-weight: normal;
+  //       }
+
+  //       button {
+  //         @include button-orange;
+  //       }
+
+  //     }
+
+  //     .slider-container {
+  //       width: 1500px;
+  //       // margin: 0 auto;
+  //       position: absolute;
+  //       justify-content: space-between;
+  //       transform: translate(40%, 0);
+  //       display: flex;
+
+  //       .images:nth-child(2) {
+
+  //         position: relative;
+  //         right: 68%;
+  //         transform: translate(0, 70%);
+  //       }
+
+  //       .images:nth-child(3) {
+  //         position: relative;
+  //         right: 55%;
+  //         transform: translate(0, 80%);
+  //       }
+
+
+  //     }
+  //   } //content-section1
+
+
+  // } //container
+
+  // .slider-nav {
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translate(-50%, 320px);
+
+
+  //   .rectangle {
+  //     width: 50px;
+  //     height: 15px;
+  //     color: $orange;
+  //     border: 3px solid $orange;
+  //     margin-right: 10px;
+  //   }
+  // }// slider nav
+
+  // ================================= END OLD BACKGROUND SLIDER ================================= 
+  
+
 
   .bottom {
     @include bg-purple;
@@ -1234,6 +1355,7 @@
     } // content footer
 
   } //container footer
+
 
 
 

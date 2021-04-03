@@ -17,8 +17,9 @@
 <body>
 
   <div id="app">
-    <!-- navbar top -->
-    <nav class="navbar flex-btw">
+    <!-- main navbar -->
+    
+    <nav :class="navBar" id="mainNavbar" class="flex-center">
       <div class="logo">
         <img src="img/nav-icons/logo.png" alt="logo fable">
       </div>
@@ -55,20 +56,22 @@
         </div>
       </div>
     </nav>
-    <!-- end navbar top -->
-
+    
+    <!-- end main navbar -->
+    
     <!-- section 1 -->
-    <section class="row-container">
-
-
-      <div class="slide-container flex-center">
-
-
-        <div class="container-section1-bg1  flex-center" :class="{hide: isHidden1}" v-for="(item, index) in sliderSection1[sliderIndex].slider1">
-
+    <section class="row-container">    
+      
+      <!-- backgrounds container -->
+      <div class="slide-container flex-center">      
+        <div class="wrap" ref="wrap">
+        
+        backgound 1 
+        <!-- <div class="container-section1-bg1  flex-center" :class="{hide: isHidden1}" v-for="(item, index) in sliderSection1">
+          
           <div class="content-section1 flex-start">
-
-
+            
+            
             <div class="welcome font-xl">
               <h4>{{item.topText}}</h4>
 
@@ -79,18 +82,18 @@
 
             <div class="slider-container">
 
-              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider1[0].imageA">
+              <div class="images" v-for="(image, index) in sliderSection1[0].imageA">
                 <div class="background-icons flex-center">
-                  <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider1[0].iconsA">
+                  <div class="icon" v-for="(icon, index) in sliderSection1[0].iconsA">
                     <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
                   </div>
                 </div>
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
-              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider1[0].imageB">
+              <div class="images" v-for="(image, index) in sliderSection1[0].imageB">
                 <div class="background-icons flex-center">
-                  <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider1[0].iconsB">
+                  <div class="icon" v-for="(icon, index) in sliderSection1[0].iconsB">
                     <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
                   </div>
                 </div>
@@ -102,14 +105,15 @@
           </div>
 
 
-        </div>
-
-        <div class="container-section1-bg2 flex-center" :class="{hide: isHidden2}" v-for="(item, index) in sliderSection1[sliderIndex].slider2">
+        </div> -->
+        
+        <!-- backgound 2  -->
+        <!-- <div class="container-section1-bg2 flex-center" :class="{hide: isHidden2}" v-for="(item, index) in sliderSection1">
 
           <div class="content-section1 flex-start">
 
             <div class="background-icons flex-center">
-              <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider2[0].icons">
+              <div class="icon" v-for="(icon, index) in sliderSection1[1].icons">
                 <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
               </div>
             </div>
@@ -124,7 +128,7 @@
 
             <div class="slider-container">
 
-              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider2[0].images">
+              <div class="images" v-for="(image, index) in sliderSection1[1].images">
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
@@ -132,17 +136,15 @@
 
           </div>
 
-        </div>
-
-        <div class="container-section1-bg3  flex-center" :class="{hide: isHidden3}" v-for="(item, index) in sliderSection1[sliderIndex].slider3">
-
-
-
+        </div> -->
+        
+        <!-- background 3  -->
+        <!-- <div class="container-section1-bg3  flex-center" :class="{hide: isHidden3}" v-for="(item, index) in sliderSection1"> 
 
           <div class="content-section1 flex-start">
 
             <div class="background-icons flex-center">
-              <div class="icon" v-for="(icon, index) in sliderSection1[sliderIndex].slider3[0].icons">
+              <div class="icon" v-for="(icon, index) in sliderSection1.icons">
                 <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
               </div>
             </div>
@@ -157,7 +159,7 @@
 
             <div class="slider-container">
 
-              <div class="images" v-for="(image, index) in sliderSection1[sliderIndex].slider3[0].images">
+              <div class="images" v-for="(image, index) in sliderSection1.images">
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
@@ -165,23 +167,44 @@
 
           </div>
 
-        </div>
+      
+        </div> -->
 
-
-
-
-        <div class="slider-nav flex-center">
+        <!-- nav rectangles -->
+        <!-- <div class="slider-nav flex-center">
           <i  class="rectangle"></i>
           <i @click="toggleSecondBg" class="rectangle"></i>
           <i @click="toggleThirdBg" class="rectangle"></i>
-        </div>
+        </div>        -->
+        
+        <!------------------------------------------- TEST SMOOTH SLIDER ------------------------------------------->
+          <section class="btn" @click="prev()" v-show="index !== 0">
+            <!-- &lt; -->
+          </section>
+          <section class="btn" @click="next()" v-show="index < list.length - 1">
+            <!-- &gt; -->
+          </section>
+          <main ref="main">
+            <article v-for="item in list" key="item" :style="'background-color: '+ item.color">
+              <section>{{item.text}}</section>
+            </article>
+          </main>
+          <div class="index flex-center">
+            <a v-for="(item, index) in list" @click="goto(index)">
+              {{index + 1}}
+            </a>
+          </div>
+        </div>        
+
       </div>
+      <!------------------------------------------- END TEST SMOOTH SLIDER ------------------------------------------->
 
     </section>
     <!-- end section 1 -->
 
+
     <!-- navbar bottom -->
-    <nav class="bottom flex-center font-l">
+    <div class="bottom flex-center font-l">
 
       <div class="content flex-btw">
         <h1>How to Enroll Your Child to a Class?</h1>
@@ -191,7 +214,7 @@
         </button>
       </div>
 
-    </nav>
+    </div>
     <!-- end navbar bottom -->
 
     <!-- section 2 -->
@@ -291,7 +314,7 @@
 
 
 
-            <div class="prev flex-center" @click="previous">
+            <div class="prev flex-center" @click="previousSlide">
               <i class="fas fa-angle-left"></i>
             </div>
 
@@ -303,7 +326,7 @@
 
 
 
-            <div class="next flex-center" @click="next">
+            <div class="next flex-center" @click="nextSlide">
               <i class="fas fa-angle-right"></i>
             </div>
           </div>
@@ -562,7 +585,7 @@
     <!-- end section 6 -->
 
     <!-- navbar bottom -->
-    <nav class="bottom bg flex-center font-l">
+    <div class="bottom bg flex-center font-l">
 
       <div class="content flex-btw">
         <h1>See Our Kindergarten Photo Gallery</h1>
@@ -572,7 +595,7 @@
         </button>
       </div>
 
-    </nav>
+    </div>
     <!-- end navbar bottom -->
 
     <!-- section 7 -->
@@ -589,9 +612,9 @@
           <h6>Cecil J. Kirk</h6>
         </div>
 
-        <div class="slider-section7 flex-center">
+        <!-- <div class="slider-section7 flex-center">
           <i v-for="(item, index ) in sliderSection1"></i>
-        </div>
+        </div> -->
 
       </div>
 
