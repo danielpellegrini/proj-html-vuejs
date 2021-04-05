@@ -1,3 +1,4 @@
+@import "var";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -77,12 +78,17 @@
 // end FLEXBOX --------------------------------------------------------------
 
 .active {
-  background-color: #fe6601;
+  background-color: $purple;
   color: white;
 
   img {
     filter: brightness(9);
   }
+}
+
+.activeBg {
+  position: relative;
+  bottom: 13px;
 }
 
 .hide {

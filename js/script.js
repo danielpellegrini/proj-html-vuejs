@@ -1,19 +1,22 @@
 new Vue({
   el: '#app',
   data: {
-
+      
     // Navbar
     navBar: {
       collapse: false,
       open: false,
     },
     scrollState: 0, // Used to keep track of scroll position
+  
+    bg1: false,
+    bg2: true,
+    bg3: true,
 
-    isHidden1: false,
-    isHidden2: false,
-    isHidden3: false,
+    currentImageIdx: 0,
 
-    sliderSection1: [{
+    sliderSection1: [
+      {
         iconsA: [1, 2, 3, 4],
         iconsB: [5, 6, 7, 8, 9],
         imageA: ['slide1_img1'],
@@ -34,7 +37,8 @@ new Vue({
       '_07-690x506',
       '_08-690x506',
     ],
-    imagesIndex: 0
+    imagesIndex: 0,
+    
 
   },
   methods: {
@@ -90,14 +94,39 @@ new Vue({
     scrollUp() {
       this.navBar.collapse = false;
       this.navBar.open = true;
+    }, 
+
+    // main background slider
+    next: function() {
+      this.currentImageIdx += 1;
+      if(this.currentImageIdx > this.images.length - 1) {
+        this.currentImageIdx = 0
+      }  
     },
+    prev: function() {
+      this.currentImageIdx -= 1;
+      if(this.currentImageIdx < 0) {
+        this.currentImageIdx = this.images.length - 1  // ultima posizione dell'array
+      }
+    },
+    selectImageIdx: function(newIndex) {
+      this.currentImageIdx = newIndex;
+    }
+    
+    
+
+  },
+  mounted() {
+    // this.classChange();
+    // this.loopToggle();
   },
 
   created() {
     window.addEventListener('scroll', () => {
       this.scrollDetect(this.scrollHome, this.scrollDown, this.scrollUp);
     })
-  }
+  },
+
 });
 
 
