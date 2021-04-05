@@ -1,0 +1,82 @@
+#mainNavbar {
+  @include navbarheight;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+
+  .navContainer {
+      @include container1300;
+
+    .logo img {
+      @include navbarheight;
+    }
+  
+    .icons-container {
+      div {
+        @include navbarheight;
+        // align-items: center;
+        padding: 0 35px;
+        transition: all 300ms;
+  
+        span {
+          margin-top: 15px;
+        }
+      }
+  
+      div:hover {
+        @include bg-orange;
+        cursor: pointer;
+  
+        img {
+          filter: brightness(9);
+        }
+  
+      }
+  
+    }
+  }
+
+  //end icons container
+}
+
+//end navbar
+
+// NAVBAR scroll effect -----------------------------------------
+
+// Collapse nav bar on scroll down
+.collapse {
+  animation: collapse .5s ease forwards;
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+
+  to {
+    opacity: 0;
+    top: -150px;
+  }
+}
+
+// Open nav bar on scroll up
+.open {
+  animation: open .5s ease forwards;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    top: -150px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+// end NAVBAR scroll effect -----------------------------------------

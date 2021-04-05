@@ -19,40 +19,43 @@
   <div id="app">
     <!-- main navbar -->
     
-    <nav :class="navBar" id="mainNavbar" class="flex-center">
-      <div class="logo">
-        <img src="img/nav-icons/logo.png" alt="logo fable">
-      </div>
+    <nav :class="navBar" id="mainNavbar">
+      <div class="navContainer flex-btw" >
+
+        <div class="logo">
+          <img src="img/nav-icons/logo.png" alt="logo fable">
+        </div>
 
 
-      <div class="icons-container flex-center">
-        <div class="flex-column">
-          <img src="img/nav-icons/home.png" alt="home">
-          <span>Home</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/document.png" alt="pages">
-          <span>Pages</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/printer.png" alt="blog">
-          <span>Blog</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/cart.png" alt="shop">
-          <span>Shop</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/lab.png" alt="shortcodes">
-          <span>Shortcodes</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/chat.png" alt="support">
-          <span>Support</span>
-        </div>
-        <div class="flex-column">
-          <img src="img/nav-icons/envelope.png" alt="contact">
-          <span>Contact</span>
+        <div class="icons-container flex-center">
+          <div class="flex-column">
+            <img src="img/nav-icons/home.png" alt="home">
+            <span>Home</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/document.png" alt="pages">
+            <span>Pages</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/printer.png" alt="blog">
+            <span>Blog</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/cart.png" alt="shop">
+            <span>Shop</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/lab.png" alt="shortcodes">
+            <span>Shortcode</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/chat.png" alt="support">
+            <span>Support</span>
+          </div>
+          <div class="flex-column">
+            <img src="img/nav-icons/envelope.png" alt="contact">
+            <span>Contact</span>
+          </div>
         </div>
       </div>
     </nav>
@@ -64,19 +67,19 @@
       
       <!-- backgrounds container -->
       <div class="slide-container flex-center">      
-        <div class="wrap" ref="wrap">
         
-        backgound 1 
-        <!-- <div class="container-section1-bg1  flex-center" :class="{hide: isHidden1}" v-for="(item, index) in sliderSection1">
+        <!-- backgound 1  -->
+        <div class="container-section1-bg1  flex-center" 
+          :class="{hide: isHidden1}">
           
           <div class="content-section1 flex-start">
             
             
             <div class="welcome font-xl">
-              <h4>{{item.topText}}</h4>
+              <h4>Welcome to Fable!</h4>
 
-              <h1>{{item.middleText}}</h1>
-              <h1>{{item.bottomText}}</h1>
+              <h1>Perfect Education</h1>
+              <h1>For Your Child</h1>
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
@@ -105,10 +108,11 @@
           </div>
 
 
-        </div> -->
+        </div>
         
         <!-- backgound 2  -->
-        <!-- <div class="container-section1-bg2 flex-center" :class="{hide: isHidden2}" v-for="(item, index) in sliderSection1">
+        <div class="container-section1-bg2 flex-center" 
+          :class="{hide: isHidden2}">
 
           <div class="content-section1 flex-start">
 
@@ -119,16 +123,16 @@
             </div>
 
             <div class="friendly font-xl">
-              <h4>{{item.topText}}</h4>
+              <h4>Friendly Atmosphere</h4>
 
-              <h1>{{item.middleText}}</h1>
-              <h1>{{item.bottomText}}</h1>
+              <h1>Welcoming Place</h1>
+              <h1>For Every Child</h1>
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
             <div class="slider-container">
 
-              <div class="images" v-for="(image, index) in sliderSection1[1].images">
+              <div class="images" v-for="image in sliderSection1[1].images">
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
@@ -136,30 +140,30 @@
 
           </div>
 
-        </div> -->
+        </div>
         
         <!-- background 3  -->
-        <!-- <div class="container-section1-bg3  flex-center" :class="{hide: isHidden3}" v-for="(item, index) in sliderSection1"> 
+        <div class="container-section1-bg3  flex-center" :class="{hide: isHidden3}" > 
 
           <div class="content-section1 flex-start">
 
             <div class="background-icons flex-center">
-              <div class="icon" v-for="(icon, index) in sliderSection1.icons">
+              <div class="icon" v-for="icon in sliderSection1[2].icons">
                 <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
               </div>
             </div>
 
             <div class="learning font-xl">
-              <h4>{{item.topText}}</h4>
+              <h4>Learning & Fun</h4>
 
-              <h1>{{item.middleText}}</h1>
-              <h1>{{item.bottomText}}</h1>
+              <h1>Learning Program</h1>
+              <h1>& After-School Care</h1>
               <button class="uppercase font-xs" type="button">buy this theme now</button>
             </div>
 
             <div class="slider-container">
 
-              <div class="images" v-for="(image, index) in sliderSection1.images">
+              <div class="images" v-for="(image, index) in sliderSection1[2].images">
                 <img :src="'img/section1/slider_' + image + '.png'" alt="image">
               </div>
 
@@ -168,7 +172,7 @@
           </div>
 
       
-        </div> -->
+        </div>
 
         <!-- nav rectangles -->
         <!-- <div class="slider-nav flex-center">
@@ -177,27 +181,6 @@
           <i @click="toggleThirdBg" class="rectangle"></i>
         </div>        -->
         
-        <!------------------------------------------- TEST SMOOTH SLIDER ------------------------------------------->
-          <section class="btn" @click="prev()" v-show="index !== 0">
-            <!-- &lt; -->
-          </section>
-          <section class="btn" @click="next()" v-show="index < list.length - 1">
-            <!-- &gt; -->
-          </section>
-          <main ref="main">
-            <article v-for="item in list" key="item" :style="'background-color: '+ item.color">
-              <section>{{item.text}}</section>
-            </article>
-          </main>
-          <div class="index flex-center">
-            <a v-for="(item, index) in list" @click="goto(index)">
-              {{index + 1}}
-            </a>
-          </div>
-        </div>        
-
-      </div>
-      <!------------------------------------------- END TEST SMOOTH SLIDER ------------------------------------------->
 
     </section>
     <!-- end section 1 -->

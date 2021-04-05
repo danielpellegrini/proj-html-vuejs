@@ -7,36 +7,43 @@
   list-style-type: none;
 }
 
-// font size
+// FONT SIZE --------------------------------------------------------------
 .font-xs {
   font-size: .4em;
 }
+
 .font-s {
   font-size: .5em;
 }
+
 .font-sm {
   font-size: .7em;
 }
+
 .font-m {
   font-size: 1.1em;
 }
+
 .font-ml {
   font-size: 1.5em;
 }
+
 .font-l {
   font-size: 2em;
 }
+
 .font-xl {
   font-size: 2.5em;
 }
-// end font size
+
+// END FONT SIZE --------------------------------------------------------------
 
 .uppercase {
   text-transform: uppercase;
 }
 
 
-// FLEXBOX
+// FLEXBOX --------------------------------------------------------------
 .flex-start {
   display: flex;
   align-items: center;
@@ -58,7 +65,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:  center;
+  align-items: center;
 }
 
 .flex-btw {
@@ -67,7 +74,7 @@
   align-items: center;
 }
 
-// end FLEXBOX
+// end FLEXBOX --------------------------------------------------------------
 
 .active {
   background-color: #fe6601;
@@ -85,3 +92,130 @@
 .show {
   display: flex;
 }
+
+// MIXIN --------------------------------------------------------------
+
+@mixin container1300 {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+@mixin navbarheight {
+  height: 150px;
+}
+
+@mixin background-img {
+  background-size: contain;
+
+}
+
+@mixin button {
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+}
+
+@mixin button-orange {
+  @include button;
+  @include bg-orange;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+
+  &:hover {
+    transition: all 300ms;
+    @include button;
+    @include bg-purple;
+    font-weight: 600;
+  }
+}
+
+@mixin button-purple {
+  @include button;
+  @include bg-purple;
+  margin-top: 40px;
+  font-weight: 600;
+  transition: all 300ms;
+  border: 3px solid white;
+
+  &:hover {
+    transition: all 300ms;
+    @include button;
+    @include bg-white;
+    font-weight: 600;
+  }
+}
+
+@mixin bg-purple {
+  background-color: $purple;
+  color: #fff;
+}
+
+@mixin bg-orange {
+  background-color: $orange;
+  color: #fff;
+}
+
+@mixin bg-white {
+  border: 3px solid white;
+  background-color: white;
+  color: $purple;
+  // padding-right: 20px;
+  font-weight: 600;
+}
+
+@mixin h1 {
+  color: $purple;
+  font-size: 2em;
+}
+
+@mixin h3 {
+  font-weight: 600;
+  color: $purple;
+}
+
+@mixin h4 {
+  font-weight: 500;
+  color: $purple;
+}
+
+@mixin h6 {
+  opacity: 0.3;
+  font-weight: 700;
+}
+
+@mixin p {
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+@mixin divider {
+  margin-top: 20px;
+
+  img {
+    height: 15px;
+  }
+
+}
+
+@mixin input {
+  border-radius: 5px;
+  outline-color: $orange;
+  border: .1px solid lightgrey;
+  width: 100%;
+  font-size: .6em;
+  opacity: .6;
+  font-weight: 600;
+}
+
+@mixin slogan {
+  @include container1300;
+  position: relative;
+  bottom: 70px;
+  color: $purple;
+  line-height: 1.5em;
+}
+
+// END MIXIN --------------------------------------------------------------
