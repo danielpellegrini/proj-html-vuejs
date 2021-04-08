@@ -82,11 +82,11 @@
   bottom: 13px;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
-.show {
+.visible {
   display: flex;
 }
 

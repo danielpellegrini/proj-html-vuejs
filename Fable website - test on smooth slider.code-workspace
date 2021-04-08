@@ -4,7 +4,16 @@
 			"path": ".."
 		},
 		{
-			"path": "..\\..\\..\\navbar"
+			"path": "..\\..\\Notes"
+		},
+		{
+			"path": "..\\..\\JS HTML CSS\\js-html-css-boolzap"
+		},
+		{
+			"path": "..\\..\\LARAVEL"
+		},
+		{
+			"path": "..\\..\\JavaScript\\js-vue"
 		}
 	],
 	"settings": {
