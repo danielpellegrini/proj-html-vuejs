@@ -23,12 +23,15 @@ new Vue({
       },
       {
         icons: [10, 14, 11, 12, 13],
-        images: ['slide2_img1', 'slide2_img2'],
+        imageA: ['slide2_img1'],
+        imageB: ['slide2_img2'],
         toggle: 'hidden'
       },
       {
         icons: [14, 15, 16, 17, 18],
-        images: ['slide3_img1', 'slide3_img2', 'slide3_img3'],
+        imageA: ['slide3_img1'],
+        imageB: ['slide3_img2'],
+        imageC: ['slide3_img3'],
         toggle: 'hidden'
       }
     ],
@@ -40,6 +43,8 @@ new Vue({
       '_08-690x506',
     ],
     imagesIndex: 0,
+    toggleFade: true,
+    my_timer: 0
     
 
   },
@@ -47,6 +52,7 @@ new Vue({
 
 
     // MAIN BG SLIDER
+
     toggleClass() {      
       if (this.currentImageIdx === 0) {
         this.bg0 = false;
@@ -73,6 +79,8 @@ new Vue({
         this.currentImageIdx += 1;
       }  
       this.toggleClass();
+      this.resetTimer();
+      this.timer();
     },
     prev(){
       if (this.currentImageIdx < 1) {
@@ -81,10 +89,14 @@ new Vue({
         this.currentImageIdx -= 1;
       }
       this.toggleClass();
+      this.resetTimer();
+      this.timer();
     },
     selectImageIdx(newIndex) {
       this.currentImageIdx = newIndex;
       this.toggleClass();
+      this.resetTimer();
+      this.timer();
     },
 
     //  BOTTOM SLIDER
@@ -106,6 +118,9 @@ new Vue({
 
     clickedDot(index) {
       this.imagesIndex = index;
+    },
+    toggleEffect1() {
+      this.toggleFade = !this.toggleFade;
     },
 
     // NAVBAR COLLAPSE EFFECT
@@ -138,10 +153,18 @@ new Vue({
       this.navBar.collapse = false;
       this.navBar.open = true;
     }, 
+    timer() {
+      this.my_timer = setInterval(() => {
+        this.next();
+      }, 6500);
+    },
+    resetTimer() {
+      clearInterval(this.my_timer);
+    }
   },
   mounted() {
+    this.timer();
     
-
   },
 
   created() {

@@ -1,5 +1,6 @@
 @import "utility";
 @import "var";
+@import "animations";
 
 #app {
   overflow-x: hidden;
@@ -27,12 +28,12 @@
   }
   .nextBg {
     right: 30px;
-    // z-index: 1;
   }
   .prevBg {
     left: 30px;
     z-index: 1;
   }
+
 
   .container-section1-bg1 {
     background-image: url($bg-section1);
@@ -52,23 +53,19 @@
         text-align: center;
         z-index: 1;
 
-        h1:first-of-type {
-          font-weight: 800;
-        }
-
+        
         h4 {
           color: $orange;
           font-family: 'Indie Flower', cursive;
           font-weight: normal;
-        }
 
-        button {
-          @include button-orange;
         }
-
       }
 
       //welcome
+      button {
+        @include button-orange;
+      }
 
       .slider-container {
         width: 1500px;
@@ -113,6 +110,7 @@
           right: 0;
           top: 0;
 
+
           .background-icons {
             width: 100%;
             height: 50%;
@@ -137,7 +135,7 @@
             }
           }//background-icons
 
-        }//images
+        }//images                  
 
       }//slider container
 
@@ -178,10 +176,6 @@
 
       .friendly {
         @include slogan;
-
-        h1:first-of-type {
-          font-weight: 700;
-        }
 
         h4 {
           color: $orange;
@@ -284,10 +278,6 @@
       .learning {
         @include slogan;
         text-align: left;
-
-        h1:first-of-type {
-          font-weight: 800;
-        }
 
         h4 {
           color: $orange;
@@ -455,7 +445,7 @@
 
       // text-align: left;
       .left-box {
-        width: 630px;
+        width: 600px;
 
         button:first-of-type {
           @include button-orange;
@@ -507,15 +497,13 @@
             margin-left: 30px;
           }
         }
-
         //card container
       }
 
       //left box
 
       .right-box {
-        width: 600px;
-        
+        width: 600px;        
         
         .slider-container {
           position: relative;
@@ -523,8 +511,7 @@
           .prev {
             position: absolute;
             left: 0;
-            z-index: 1;
-            
+            z-index: 1;            
           }
 
           .next {
@@ -547,12 +534,12 @@
         }
 
         .slider-thumbnails {
-          width: 33.333%;
+          width: 625px;
           display: flex;
 
           img {
-            margin: 0 10px;
-            width: calc(100% - 10px);
+            padding: 10px;
+            width: 100%;
             cursor: pointer;
           }
         }

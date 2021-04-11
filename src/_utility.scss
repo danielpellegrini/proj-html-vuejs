@@ -91,6 +91,19 @@
   bottom: 13px;
 }
 
+.thumb:hover {
+  opacity: .5;
+}
+
+.activeimg::after {
+  content: '';
+  display: inherit;
+  width: 90%;
+  border-bottom: 2px solid $orange;
+  margin: 0 auto;
+
+}
+
 .hidden {
   display: none;
 }

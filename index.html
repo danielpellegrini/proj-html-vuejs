@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet">
     <!-- Google fonts -->
+    <link rel="shortcut icon" href="img/logo/favicon.png" type="image/jpg">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Fable</title>
   </head>
@@ -72,21 +73,26 @@
             <i class="fas fa-angle-left"></i>
           </div>
 
-
-
           <!-- backgound 1  -->
           <div  >
-            <div class="container-section1-bg1 flex-center" :class="{hidden: bg0}">
+            <div class="container-section1-bg1 flex-center fade-in" :class="{hidden: bg0}">
 
               <div class="content-section1 flex-start">
 
-
                 <div class="welcome font-xl">
-                  <h4>Welcome to Fable!</h4>
-
-                  <h1>Perfect Education</h1>
-                  <h1>For Your Child</h1>
-                  <button class="uppercase font-xs" type="button">buy this theme now</button>
+                  <h4 class="puff-in-bottom">Welcome to Fable!</h4>
+                  <div>
+                    <h1 class="fade-in-bottom-first">Perfect </h1>
+                    <h1 class="fade-in-bottom-last">Education</h1>
+                  </div>
+                  <div>
+                    <h1 class="fade-in-bottom-first1">For </h1>
+                    <h1 class="fade-in-bottom-middle">Your </h1>
+                    <h1 class="fade-in-bottom-last1">Child</h1> 
+                  </div>
+                  
+                  <button class="puff-in-center uppercase font-xs" type="button">buy this theme now</button>
+                  
                 </div>
 
                 <div class="slider-container">
@@ -97,7 +103,7 @@
                         <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
                       </div>
                     </div>
-                    <img :src="'img/section1/slider_' + image + '.png'" alt="image">
+                    <img class="fade-in-left" :src="'img/section1/slider_' + image + '.png'" alt="image" >
                   </div>
 
                   <div class="images" v-for="(image, index) in sliderSection1[0].imageB">
@@ -106,7 +112,7 @@
                         <img :src="'img/section1/slider_icon' + icon + '.png'" alt="symbol">
                       </div>
                     </div>
-                    <img :src="'img/section1/slider_' + image + '.png'" alt="image">
+                    <img class="fade-in-right" :src="'img/section1/slider_' + image + '.png'" alt="image">
                   </div>
 
                 </div>
@@ -118,7 +124,7 @@
           
           <!-- backgound 2  -->
           <!-- <div v-for="(bg, i) in sliderSection1" > -->
-            <div class="container-section1-bg2 flex-center" :class="{hidden: bg1}">
+            <div class="container-section1-bg2 flex-center fade-in" :class="{hidden: bg1}">
   
               <div class="content-section1 flex-start">
   
@@ -129,16 +135,28 @@
                 </div>
   
                 <div class="friendly font-xl">
-                  <h4>Friendly Atmosphere</h4>
-  
-                  <h1>Welcoming Place</h1>
-                  <h1>For Every Child</h1>
-                  <button class="uppercase font-xs" type="button">buy this theme now</button>
+                  <h4 class="puff-in-bottom">Friendly Atmosphere</h4>
+                
+
+                  <div>
+                    <h1 class="fade-in-bottom-first">Welcoming</h1> 
+                    <h1 class="fade-in-bottom-last">Place</h1>
+                  </div>
+
+                  <div>
+                    <h1 class="fade-in-bottom-first1">For </h1>
+                    <h1 class="fade-in-bottom-middle">Every </h1>
+                    <h1 class="fade-in-bottom-last1">Child</h1> 
+                  </div>
+                  <button class=" puff-in-center uppercase font-xs" type="button">buy this theme now</button>
                 </div>
   
                 <div class="slider-container">
   
-                  <div class="images" v-for="image in sliderSection1[1].images">
+                  <div class="images img1-right" v-for="image in sliderSection1[1].imageA">
+                    <img :src="'img/section1/slider_' + image + '.png'" alt="image">
+                  </div>
+                  <div class="images img2-right  " v-for="image in sliderSection1[1].imageB">
                     <img :src="'img/section1/slider_' + image + '.png'" alt="image">
                   </div>
   
@@ -152,7 +170,7 @@
 
           <!-- background 3  -->
           <!-- <div v-for="(bg, i) in sliderSection1" > -->
-            <div class="container-section1-bg3 flex-center" :class="{hidden: bg2}">
+            <div class="container-section1-bg3 flex-center fade-in" :class="{hidden: bg2}">
   
               <div class="content-section1 flex-start">
   
@@ -163,17 +181,33 @@
                 </div>
   
                 <div class="learning font-xl">
-                  <h4>Learning & Fun</h4>
+                  <h4 class="puff-in-bottom">Learning & Fun</h4>
   
-                  <h1>Learning Program</h1>
-                  <h1>& After-School Care</h1>
-                  <button class="uppercase font-xs" type="button">buy this theme now</button>
+                  <div>
+                    <h1 class="fade-in-bottom-first">Learning </h1> 
+                    <h1 class="fade-in-bottom-last">Program</h1>
+                  </div>
+
+                  <div>
+                    <h1 class="fade-in-bottom-first1">& </h1>
+                    <h1 class="fade-in-bottom-middle">After </h1>
+                    <h1 class="fade-in-bottom-last1">School</h1> 
+                    <h1 class="fade-in-bottom-last1">Care</h1> 
+                  </div>
+
+                  <button class="puff-in-center uppercase font-xs" type="button">buy this theme now</button>
                 </div>
   
                 <div class="slider-container">
   
-                  <div class="images" v-for="(image, index) in sliderSection1[2].images">
-                    <img :src="'img/section1/slider_' + image + '.png'" alt="image">
+                  <div class="images" v-for="(image, index) in sliderSection1[2].imageA">
+                    <img class="fade-in-left1" :src="'img/section1/slider_' + image + '.png'" alt="kids">
+                  </div>
+                  <div class="images" v-for="(image, index) in sliderSection1[2].imageB">
+                    <img class="fade-in-left" :src="'img/section1/slider_' + image + '.png'" alt="toy left">
+                  </div>
+                  <div class="images" v-for="(image, index) in sliderSection1[2].imageC">
+                    <img class="fade-in-right1" :src="'img/section1/slider_' + image + '.png'" alt="toy right">
                   </div>
   
                 </div>
@@ -183,15 +217,11 @@
   
             </div>
         
-          </div>
-            
-
-          
+          </div> 
 
           <div class="nextBg font-l flex-center" @click="next()">
             <i class="fas fa-angle-right"></i>
           </div>
-
 
           <!-- nav rectangles -->
           <div class="slider-nav flex-center">
@@ -202,12 +232,8 @@
             </i>
           </div>
 
-
-
-
       </section>
       <!-- end section 1 -->
-
 
       <!-- navbar bottom -->
       <div class="bottom flex-center font-l">
@@ -324,30 +350,22 @@
 
             <div class="slider-container flex-center">
 
-
-
-              <div class="prev flex-center" @click="previousSlide">
+              <div class="prev flex-center" @click="previousSlide(), toggleEffect1()">
                 <i class="fas fa-angle-left"></i>
               </div>
 
-
-
-              <div class="images">
+              <div class="images" :class="{fade: toggleFade, fade1:!toggleFade}">
                 <img class="active first" :src="'img/section3/gallery' + imagesList[imagesIndex] + '.jpg'">
               </div>
 
-
-
-              <div class="next flex-center" @click="nextSlide">
+              <div class="next flex-center" @click="nextSlide(), toggleEffect1()">
                 <i class="fas fa-angle-right"></i>
               </div>
             </div>
 
-
-
-            <div class="flex-center">
-              <div class="slider-thumbnails " v-for="(image, index) in imagesList" :key="image.key">
-                <img @click="clickedDot(index)" :src="'img/section3/gallery' + image + '.jpg'">
+            <div class="flex-center slider-thumbnails">
+              <div :class="[{ activeimg: index === imagesIndex }]" v-for="(image, index) in imagesList" :key="image.key">
+                <img class="thumb" @click="clickedDot(index), toggleEffect1()" :class="[{ activeimg: index === imagesIndex }]" :src="'img/section3/gallery' + image + '.jpg'">
               </div>
 
             </div>
