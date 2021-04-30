@@ -313,32 +313,70 @@
 
           <!-- left box -->
           <div class="left-box">
-            <button class="font-sm" type="button">Overview</button>
-            <button class="font-sm" type="button">Our Mission</button>
+            <a class="font-sm btn-first" @click="isSelected()" :class="isClicked ? 'btn_mission' : 'btn_overview'" >Overview<span class="speech-bubble-first"></span></a>
+            <a class="font-sm btn-second"  @click="isSelected()" :class="isClicked ? 'btn_overview' : 'btn_mission'">Our Mission<span class="speech-bubble-second"></span></a> 
 
-            <h3>Our philosophy is learning through play as we offer a stimulating environment for children.</h3>
-
-            <div class="card-container">
-              <div class="icon-container flex-center">
-                <img src="img/section3/clock_alt.png" alt="clock">
+            <div class="overview_box" :class="isClicked ? 'hidden' : '' " >
+              <h3>Our philosophy is learning through play as we offer a stimulating environment for children.</h3>
+  
+              <div class="card-container">
+                <div class="icon-container flex-center">
+                  <img src="img/section3/clock_alt.png" alt="clock">
+                </div>
+  
+                <div class="card-info">
+                  <h4>Full Day Sessions</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                </div>
               </div>
-
-              <div class="card-info">
-                <h4>Full Day Sessions</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.</p>
+  
+              <div class="card-container">
+                <div class="icon-container flex-center">
+                  <img src="img/section3/diagram_alt.png" alt="diagram">
+                </div>
+  
+                <div class="card-info">
+                  <h4>Varied Classes</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                </div>
               </div>
             </div>
 
-            <div class="card-container">
-              <div class="icon-container flex-center">
-                <img src="img/section3/diagram_alt.png" alt="diagram">
+            <div class="mission_box" :class="isDefault ? 'hidden' : '' ">
+
+              <div class="card-container2">
+                <div class="icon-container2 flex-center">
+                  <img src="img/section3/screen.png" alt="clock">
+                </div>
+  
+                <div class="card-info">
+                  <h4>Online Access</h4>
+                  <p>Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.</p>
+                </div>
+              </div>
+  
+              <div class="card-container2">
+                <div class="icon-container2 flex-center">
+                  <img src="img/section3/heart.png" alt="diagram">
+                </div>
+  
+                <div class="card-info">
+                  <h4>Maecenas Node</h4>
+                  <p>Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.</p>
+                </div>
               </div>
 
-              <div class="card-info">
-                <h4>Varied Classes</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.</p>
+              <div class="card-container2">
+                <div class="icon-container2 flex-center">
+                  <img src="img/section3/lab1.png" alt="diagram">
+                </div>
+  
+                <div class="card-info">
+                  <h4>Praesent Morbi</h4>
+                  <p>Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.</p>
+                </div>
               </div>
             </div>
 
@@ -429,7 +467,7 @@
 
               <img src="img/section4/class_01-690x506.jpg" alt="class 12 to 24 months">
 
-              <button class="font-s " type="button">read more <i class="fas fa-angle-right"></i> </button>
+              <button class="font-s uppercase" type="button">read more <i class="fas fa-angle-right"></i> </button>
 
             </div>
 
@@ -454,7 +492,7 @@
 
               <img src="img/section4/class_02-690x506.jpg" alt="class 2-3 year olds">
 
-              <button class="font-s " type="button">read more <i class="fas fa-angle-right"></i> </button>
+              <button class="font-s uppercase" type="button">read more <i class="fas fa-angle-right"></i> </button>
 
             </div>
 
@@ -479,7 +517,7 @@
 
               <img src="img/section4/class_03-690x506.jpg" alt="class 3-4 year olds">
 
-              <button class="font-s " type="button">read more <i class="fas fa-angle-right"></i> </button>
+              <button class="font-s uppercase" type="button">read more <i class="fas fa-angle-right"></i> </button>
 
             </div>
 
@@ -504,7 +542,7 @@
 
               <img src="img/section4/class_04-690x506.jpg" alt="class 4-5 year olds">
 
-              <button class="font-s " type="button">read more <i class="fas fa-angle-right"></i> </button>
+              <button class="font-s uppercase" type="button">read more <i class="fas fa-angle-right"></i> </button>
 
             </div>
 

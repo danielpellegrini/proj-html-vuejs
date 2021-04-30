@@ -1,19 +1,11 @@
 {
 	"folders": [
 		{
-			"path": ".."
-		},
-		{
+			"name": "Notes",
 			"path": "..\\..\\Notes"
 		},
 		{
-			"path": "..\\..\\LARAVEL\\laravel-auth"
-		},
-		{
-			"path": "..\\..\\API ajax\\vue-boolflix"
-		},
-		{
-			"path": "..\\.."
+			"path": "."
 		}
 	],
 	"settings": {

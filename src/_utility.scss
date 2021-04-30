@@ -93,6 +93,7 @@
 
 .thumb:hover {
   opacity: .5;
+  transition: all 300ms;
 }
 
 .activeimg::after {
@@ -110,6 +111,10 @@
 
 .visible {
   display: flex;
+}
+
+.visible_inline {
+  display: inline-block;
 }
 
 // MIXIN --------------------------------------------------------------

@@ -44,15 +44,16 @@ new Vue({
     ],
     imagesIndex: 0,
     toggleFade: true,
-    my_timer: 0
-    
+    my_timer: 0,
+    my_timer2: 0,
 
+    isClicked: false,
+    isDefault: true
   },
   methods: {
 
 
-    // MAIN BG SLIDER
-
+    // ------------------------ MAIN BG SLIDER
     toggleClass() {      
       if (this.currentImageIdx === 0) {
         this.bg0 = false;
@@ -82,6 +83,7 @@ new Vue({
       this.resetTimer();
       this.timer();
     },
+
     prev(){
       if (this.currentImageIdx < 1) {
         this.currentImageIdx = this.sliderSection1.length - 1;
@@ -92,6 +94,7 @@ new Vue({
       this.resetTimer();
       this.timer();
     },
+
     selectImageIdx(newIndex) {
       this.currentImageIdx = newIndex;
       this.toggleClass();
@@ -99,13 +102,26 @@ new Vue({
       this.timer();
     },
 
-    //  BOTTOM SLIDER
+    timer() {
+      this.my_timer = setInterval(() => {
+        this.next();
+      }, 7000);
+    },
+
+    resetTimer() {
+      clearInterval(this.my_timer);
+    },
+
+    //  ------------------------ BOTTOM SLIDER
     nextSlide() {
       if (this.imagesIndex >= this.imagesList.length - 1) {
         this.imagesIndex = 0;
       } else {
         this.imagesIndex += 1;
       }
+      this.resetTimer2();
+      this.timer2();
+      this.toggleEffect1();
     },
 
     previousSlide() {
@@ -114,16 +130,36 @@ new Vue({
       } else {
         this.imagesIndex -= 1;
       }
+      this.resetTimer2();
+      this.timer2();
     },
 
     clickedDot(index) {
       this.imagesIndex = index;
+      this.resetTimer2();
+      this.timer2();
     },
+
     toggleEffect1() {
       this.toggleFade = !this.toggleFade;
     },
 
-    // NAVBAR COLLAPSE EFFECT
+    timer2() {
+      this.my_timer2 = setInterval(() => {
+        this.nextSlide();
+      }, 3000);
+    },
+
+    resetTimer2() {
+      clearInterval(this.my_timer2);
+    },
+
+    isSelected() {
+      this.isClicked = !this.isClicked;
+      this.isDefault = !this.isDefault;
+    },
+
+    // ------------------------ NAVBAR COLLAPSE EFFECT
     scrollDetect(home, down, up) {
       // Current scroll position
       const currentScroll = this.scrollTop();
@@ -153,18 +189,12 @@ new Vue({
       this.navBar.collapse = false;
       this.navBar.open = true;
     }, 
-    timer() {
-      this.my_timer = setInterval(() => {
-        this.next();
-      }, 6500);
-    },
-    resetTimer() {
-      clearInterval(this.my_timer);
-    }
+
   },
+
   mounted() {
-    this.timer();
-    
+    this.timer();    
+    this.timer2();    
   },
 
   created() {
